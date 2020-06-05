@@ -1,7 +1,6 @@
 import React from 'react';
 
 import Section from '../Section';
-import styles from './Skills.module.css';
 
 export function Skills(props) {
   return (

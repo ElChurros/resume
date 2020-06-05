@@ -1,11 +1,5 @@
 import React from 'react';
 
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
 import Header from './Header';
 import Profile from './Profile';
 import Skills from './Skills';
@@ -29,7 +23,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <Router>
+      <>
         <div className={styles.bgImage}></div>
         <div className={styles.content}>
         <Header sections={this.sections} currentSection={this.state.currentSection} setSection={this.setSection} />
@@ -43,7 +37,7 @@ class App extends React.Component {
             {this.state.currentSection === 'Projects' && <Projects/>}
           </main>
         </div>
-      </Router>
+      </>
     );
   }
 }
