@@ -13,4 +13,47 @@
   position: absolute;
   left: 0;
   top: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.maincontent {
+  background-color: red;
+}
+
+.content aside {
+  position: fixed;
+  left: 70%;
+  top: 3rem;
+  bottom: 0;
+  padding: 1rem;
+  padding-top: 2rem;
+  margin: 1rem;
+  box-sizing: border-box;
+  background-color: var(--bg-transparent);
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: flex-start;
+  color: var(--fg-normal-dark);
+  box-shadow: 0 0 5px 2px var(--shadow);
+  overflow-y: auto;
+}
+
+.content main {
+  display: block;
+  position: fixed;
+  bottom:0;
+  top: 3rem;
+  left: 0;
+  right: 30%;
+  background-color: green;
+  margin: 1rem;
+  margin-left: 3rem;
+  box-sizing: border-box;
+  color: var(--fg-normal-light);
+  box-shadow: 0 0 5px 2px var(--shadow);
+  padding: 1rem;
+  background-color: var(--bg-transparent);
+  overflow-y: auto;
 }

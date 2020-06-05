@@ -1,9 +1,11 @@
 .nav {
     width: 100vw;
-    height: 4rem;
-    background-color: var(--bg-normal-light);
+    height: 3rem;
+    background-color: var(--bg-normal-dark);
     display: flex;
     flex-flow: row;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: stretch;
+    box-shadow: 0 0 5px 2px;
+    font-family: 'Fira Code Regular';
 }

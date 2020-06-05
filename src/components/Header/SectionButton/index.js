@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { Children } from 'react';
 
 import styles from './SectionButton.module.css';
 
-export function SectionButton({title, held, className, ...props}) {
+export function SectionButton({children, held, className, ...props}) {
     className = held ? `${className} ${styles.held}` : className;
     return (
         <button className={className} {...props}>
-            {title}
+            {children}
         </button>
     )
 }
