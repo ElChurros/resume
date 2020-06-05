@@ -1,12 +1,28 @@
 .bgImage {
   height: 100vh;
   width: 100vw;
-  background-image: url('/code.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   filter: blur(8px);
   -webkit-filter: blur(4px);
+  transition: .2s;
+}
+
+.skillsbg {
+  background-image: url('/skills.jpg');
+}
+
+.trainingbg {
+  background-image: url('/training.jpg');
+}
+
+.experiencebg {
+  background-image: url('/experience.jpg');
+}
+
+.projectsbg {
+  background-image: url('/projects.jpg');
 }
 
 .content {

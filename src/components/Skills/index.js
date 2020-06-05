@@ -9,44 +9,72 @@ export function Skills(props) {
       <Section title={'Programming languages'}>
         <div className={styles.horizList}>
           <div>
-            <img size={'80px'} alt="Javascript logo" width={'100px'} src={process.env.PUBLIC_URL + '/logos/javascript-logo.png'}></img>
+            <img alt="HTML logo" width={'100px'} src={process.env.PUBLIC_URL + '/logos/html-logo.png'}/>
+          </div>
+          <div>
+            <img style={{marginRight: '10px'}} alt="CSS logo" width={'100px'} src={process.env.PUBLIC_URL + '/logos/css-logo.png'}/>
+          </div>
+          <div>
+            <img style={{marginRight: '10px'}} alt="Javascript logo" width={'80px'} src={process.env.PUBLIC_URL + '/logos/javascript-logo.png'}/>
             <span>Javascript</span>
           </div>
           <div>
-            <img alt="Vue logo" width={'70px'} src={process.env.PUBLIC_URL + '/logos/vue-logo.png'}></img>
-            <span>Vue</span>
+            <img style={{marginRight: '10px'}} alt="C++ logo" width={'85px'} src={process.env.PUBLIC_URL + '/logos/c++-logo.png'}/>
           </div>
           <div>
-            <img alt="Angular logo" width={'80px'} src={process.env.PUBLIC_URL + '/logos/angular-logo.png'}></img>
-            <span>Angular</span>
+            <img style={{marginRight: '10px'}} alt="Python logo" width={'80px'} src={process.env.PUBLIC_URL + '/logos/python-logo.png'}/>
+            <span>Python</span>
+          </div>
+          <div>
+            <img style={{marginRight: '10px'}} alt="PHP logo" width={'110px'} src={process.env.PUBLIC_URL + '/logos/php-logo.png'}/>
           </div>
         </div>
       </Section>
       <Section title={'Web frameworks'}>
         <div className={styles.horizList}>
           <div>
-            <img alt="React logo" width={'100px'} src={process.env.PUBLIC_URL + '/logos/react-logo.png'}></img>
+            <img alt="React logo" width={'100px'} src={process.env.PUBLIC_URL + '/logos/react-logo.png'}/>
             <span>React</span>
           </div>
           <div>
-            <img alt="Vue logo" width={'70px'} src={process.env.PUBLIC_URL + '/logos/vue-logo.png'}></img>
+            <img alt="Vue logo" width={'70px'} src={process.env.PUBLIC_URL + '/logos/vue-logo.png'}/>
             <span>Vue</span>
           </div>
           <div>
-            <img alt="Angular logo" width={'80px'} src={process.env.PUBLIC_URL + '/logos/angular-logo.png'}></img>
+            <img alt="Angular logo" width={'80px'} src={process.env.PUBLIC_URL + '/logos/angular-logo.png'}/>
             <span>Angular</span>
           </div>
+          <div><img alt="Django logo" width={'150px'} src={process.env.PUBLIC_URL + '/logos/django-logo.png'}/></div>
+          <div><img alt="Symfony logo" width={'100px'} src={process.env.PUBLIC_URL + '/logos/symfony-logo.png'}/></div>
         </div>
       </Section>
       <Section title={"Mobile frameworks"}>
         <div className={styles.horizList}>
           <div>
-            <img alt="React logo" width={'100px'} src={process.env.PUBLIC_URL + '/logos/react-logo.png'}></img>
+            <img alt="React logo" width={'100px'} src={process.env.PUBLIC_URL + '/logos/react-logo.png'}/>
             <span>React Native</span>
           </div>
           <div>
-            <img alt="Android Studio logo" width={'80px'} src={process.env.PUBLIC_URL + '/logos/androidstudio-logo.png'}></img>
+            <img alt="Android Studio logo" width={'80px'} src={process.env.PUBLIC_URL + '/logos/androidstudio-logo.png'}/>
             <span>Android Studio</span>
+          </div>
+        </div>
+      </Section>
+      <Section title={"Databases"}>
+        <div className={styles.horizList}>
+          <div><img alt="MongoDB logo" width={'150px'} src={process.env.PUBLIC_URL + '/logos/mongodb-logo.png'}/></div>
+          <div><img alt="MySQL logo" width={'150px'} src={process.env.PUBLIC_URL + '/logos/sql-logo.png'}/></div>
+        </div>
+      </Section>
+      <Section title="Development tools">
+        <div className={styles.horizList}>
+          <div>
+            <img style={{marginRight: '10px'}} alt="Git logo" width={'80px'} src={process.env.PUBLIC_URL + '/logos/git-logo.png'}/>
+            <span>Git</span>
+          </div>
+          <div>
+            <img style={{marginRight: '10px'}} alt="Docker logo" width={'80px'} src={process.env.PUBLIC_URL + '/logos/docker-logo.png'}/>
+            <span>Docker</span>
           </div>
         </div>
       </Section>

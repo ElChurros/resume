@@ -1,6 +1,6 @@
 import React from 'react';
-import SimpleBar from 'simplebar-react';
 
+import ImageLoader from './ImageLoader'
 import Header from './Header';
 import Profile from './Profile';
 import Skills from './Skills';
@@ -23,9 +23,15 @@ class App extends React.Component {
   }
 
   render() {
+    const bgstyle = `${styles.bgImage} ${
+      this.state.currentSection === 'Skills' ? styles.skillsbg
+      : this.state.currentSection === 'Training' ? styles.trainingbg
+      : this.state.currentSection === 'Experience' ? styles.experiencebg
+      : styles.projectsbg}`;
     return (
       <>
-        <div className={styles.bgImage}></div>
+        <ImageLoader/>
+        <div className={`${bgstyle}`}></div>
         <div className={styles.content}>
         <Header sections={this.sections} currentSection={this.state.currentSection} setSection={this.setSection} />
           <aside>
