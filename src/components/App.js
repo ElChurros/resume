@@ -1,4 +1,5 @@
 import React from 'react';
+import SimpleBar from 'simplebar-react';
 
 import Header from './Header';
 import Profile from './Profile';

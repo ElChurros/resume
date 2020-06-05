@@ -56,6 +56,10 @@
     text-align: center;
 }
 
+.name {
+    text-align: center;
+}
+
 .bulletsep {
     padding-left: .2rem;
     padding-right: .2rem;

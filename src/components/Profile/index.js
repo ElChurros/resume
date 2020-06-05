@@ -8,7 +8,7 @@ export function Profile(props) {
       <div className={styles.imagemask}>
         <img alt="Profile" src={process.env.PUBLIC_URL + '/profile.png'}></img>
       </div>
-      <h2>Arthur Lemaire</h2>
+      <h2 className={styles.name}>Arthur Lemaire</h2>
       <p className={styles.description}>
         Web and mobile <br/>developer by day, music producer by night.
       </p>

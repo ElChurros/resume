@@ -1,0 +1,15 @@
+.horizList {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+.horizList > div {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}

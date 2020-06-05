@@ -38,6 +38,21 @@
   color: var(--fg-normal-dark);
   box-shadow: 0 0 5px 2px var(--shadow);
   overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--fg-accent-light) none;
+}
+
+.content aside::-webkit-scrollbar {
+  width: 6px;
+}
+
+.content aside::-webkit-scrollbar-track {
+  background: none;
+}
+
+.content aside::-webkit-scrollbar-thumb {
+  background-color: var(--fg-accent-light) ;
+  border-radius: 3px;
 }
 
 .content main {
@@ -47,7 +62,6 @@
   top: 3rem;
   left: 0;
   right: 30%;
-  background-color: green;
   margin: 1rem;
   margin-left: 3rem;
   box-sizing: border-box;
@@ -56,4 +70,19 @@
   padding: 1rem;
   background-color: var(--bg-transparent);
   overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--fg-accent-dark) none;
+}
+
+.content main::-webkit-scrollbar {
+  width: 6px;
+}
+
+.content main::-webkit-scrollbar-track {
+  background: none;
+}
+
+.content main::-webkit-scrollbar-thumb {
+  background-color: var(--fg-accent-dark) ;
+  border-radius: 3px;
 }
