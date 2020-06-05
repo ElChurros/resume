@@ -1,3 +1,8 @@
+body, html {
+  height: 100vh;
+  width: 100vw;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +15,21 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+:root {
+  --bg-normal-dark:  #1F1F1F;
+  --bg-normal-light: #404040;
+  --fg-normal-dark:  #AEAEAE;
+  --fg-normal-light: #E0E0E0;
+  --bg-accent-dark:  #22775B;
+  --bg-accent-light: #138660;
+  --fg-accent-dark:  #009966;
+  --fg-accent-light: #00E096;
+  --fg-disabled: #202020;
+}
+
+#root {
+  height: 100vh;
+  width: 100vw;
 }

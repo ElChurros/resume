@@ -1,0 +1,10 @@
+button {
+    outline: none;
+    background: none;
+    border: none;
+    transition: 0.2s;
+}
+
+.held {
+    color: var(--fg-accent-light);
+}

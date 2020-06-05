@@ -1,0 +1,9 @@
+.nav {
+    width: 100vw;
+    height: 4rem;
+    background-color: var(--bg-normal-light);
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-end;
+    align-items: stretch;
+}
