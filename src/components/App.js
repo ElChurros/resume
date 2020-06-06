@@ -12,9 +12,9 @@ import styles from './App.module.css';
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.sections = ['Skills', 'Training', 'Experience', 'Projects'];
+    this.sections = ['Skills', 'Training', 'Experiences', 'Projects'];
     this.state = {
-      currentSection: 'Skills',
+      currentSection: 'Projects',
     }
   }
 
@@ -26,7 +26,7 @@ class App extends React.Component {
     const bgstyle = `${styles.bgImage} ${
       this.state.currentSection === 'Skills' ? styles.skillsbg
       : this.state.currentSection === 'Training' ? styles.trainingbg
-      : this.state.currentSection === 'Experience' ? styles.experiencebg
+      : this.state.currentSection === 'Experiences' ? styles.experiencebg
       : styles.projectsbg}`;
     return (
       <>

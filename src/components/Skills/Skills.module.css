@@ -4,12 +4,26 @@
     justify-content: space-evenly;
 }
 
-.horizList > div {
+.horizList > * {
+    margin: 1rem;
+}
+
+.logoElem {
     display: flex;
     flex-flow: row;
     justify-content: flex-start;
     align-items: center;
-    margin: 1rem;
-/*     margin-left: 2rem;
-    margin-right: 2rem; */
+}
+
+.verticalList {
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 2rem;
+    min-width: 25%;
+}
+
+.verticalList > span {
+    text-align: center;
 }
