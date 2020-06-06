@@ -5,7 +5,7 @@
   background-position: center;
   background-size: cover;
   filter: blur(8px);
-  -webkit-filter: blur(4px);
+  -webkit-filter: blur(6px);
   transition: .2s;
 }
 
@@ -39,6 +39,7 @@
 
 .content aside {
   position: fixed;
+  border-radius: .25rem;
   left: 70%;
   top: 3rem;
   bottom: 0;
@@ -52,10 +53,10 @@
   align-items: center;
   justify-content: flex-start;
   color: var(--fg-normal-dark);
-  box-shadow: 0 0 5px 2px var(--shadow);
+  box-shadow: 0 1px 5px 2px var(--shadow);
   overflow-y: auto;
   scrollbar-width: thin;
-  scrollbar-color: var(--fg-accent-light) none;
+  scrollbar-color: var(--fg-accent-light-transparent) none;
 }
 
 .content aside::-webkit-scrollbar {
@@ -67,7 +68,7 @@
 }
 
 .content aside::-webkit-scrollbar-thumb {
-  background-color: var(--fg-accent-light) ;
+  background-color: var(--fg-accent-light-transparent);
   border-radius: 3px;
 }
 
@@ -80,14 +81,15 @@
   right: 30%;
   margin: 1rem;
   margin-left: 5%;
+  border-radius: .25rem;
   box-sizing: border-box;
   color: var(--fg-normal-light);
-  box-shadow: 0 0 5px 2px var(--shadow);
+  box-shadow: 0 1px 5px 2px var(--shadow);
   padding: 1rem;
   background-color: var(--bg-transparent);
   overflow-y: auto;
   scrollbar-width: thin;
-  scrollbar-color: var(--fg-accent-dark) none;
+  scrollbar-color: var(--fg-accent-light-transparent) none;
 }
 
 .content main::-webkit-scrollbar {
@@ -99,6 +101,6 @@
 }
 
 .content main::-webkit-scrollbar-thumb {
-  background-color: var(--fg-accent-dark) ;
+  background-color: var(--fg-accent-light-transparent);
   border-radius: 3px;
 }

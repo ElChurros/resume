@@ -3,15 +3,16 @@ button {
     background-color: var(--bg-normal-dark);
     border: none;
     transition: 0.2s;
-    color: var(--fg-normal-dark);
+    color: var(--fg-accent-light);
     flex: 1;
     font-family: 'Fira Code Light';
+    font-weight: normal;
     cursor: pointer;
 }
 
 .held {
     color: var(--fg-normal-light);
     background-color: var(--bg-accent-dark);
+    font-weight: bolder;
     flex: 2;
-    font-weight: 900;
 }

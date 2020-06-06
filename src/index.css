@@ -27,6 +27,8 @@ body {
   --fg-disabled: #202020;
   --bg-transparent: rgba(25, 25, 25, 0.7);
   --shadow: rgb(0, 0, 0);
+  --fg-accent-light-transparent: rgba(0, 224, 150, 0.1);
+  --fg-accent-dark-transparent: rgba(0, 153, 102, 0.2);
 }
 
 #root {

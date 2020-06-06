@@ -20,7 +20,8 @@
 .content {
     padding-top: 1rem;
     padding-left: 2rem;
-    border-bottom: solid 1px rgba(0, 0, 0, 0.7);
+    padding-right: 2rem;
+    border-bottom: solid 1px var(--fg-accent-dark-transparent);
     padding-bottom: 4rem;
 }
 
@@ -28,6 +29,6 @@
     border-bottom: none;
 }
 
-.content > span {
-    padding-left: 2rem;
+.content > p {
+    text-align: justify;
 }
