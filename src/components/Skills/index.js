@@ -62,8 +62,8 @@ export function Skills(props) {
       </Section>
       <Section title={"Databases"}>
         <div className={styles.horizList}>
-          <div><img alt="MongoDB logo" width={'150px'} src={process.env.PUBLIC_URL + '/logos/mongodb-logo.png'}/></div>
-          <div><img alt="MySQL logo" width={'150px'} src={process.env.PUBLIC_URL + '/logos/sql-logo.png'}/></div>
+          <div className={styles.logoElem}><img alt="MongoDB logo" width={'150px'} src={process.env.PUBLIC_URL + '/logos/mongodb-logo.png'}/></div>
+          <div className={styles.logoElem}><img alt="MySQL logo" width={'150px'} src={process.env.PUBLIC_URL + '/logos/sql-logo.png'}/></div>
         </div>
       </Section>
       <Section title="Development tools">
