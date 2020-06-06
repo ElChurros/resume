@@ -1,4 +1,8 @@
 .nav {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
     width: 100vw;
     height: 3rem;
     background-color: var(--bg-normal-dark);
@@ -8,4 +12,9 @@
     align-items: stretch;
     box-shadow: 0 0 5px 2px;
     font-family: 'Fira Code Regular';
+    transition: 0.4s;
+}
+
+.hidden {
+    top: -3rem;
 }

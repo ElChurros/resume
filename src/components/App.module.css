@@ -31,10 +31,7 @@
   top: 0;
   height: 100%;
   width: 100%;
-}
-
-.maincontent {
-  background-color: red;
+  overflow-y: auto;
 }
 
 .content aside {
@@ -46,6 +43,7 @@
   padding: 1rem;
   padding-top: 2rem;
   margin: 1rem;
+  margin-left: 0;
   box-sizing: border-box;
   background-color: var(--bg-transparent);
   display: flex;
@@ -80,7 +78,6 @@
   left: 0;
   right: 30%;
   margin: 1rem;
-  margin-left: 5%;
   border-radius: .25rem;
   box-sizing: border-box;
   color: var(--fg-normal-light);
@@ -103,4 +100,19 @@
 .content main::-webkit-scrollbar-thumb {
   background-color: var(--fg-accent-light-transparent);
   border-radius: 3px;
+}
+
+@media only screen and (max-width: 768px) {
+  .content main {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+
+  .content aside {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-left: 1rem;
+  }
 }

@@ -12,6 +12,8 @@ import styles from './App.module.css';
 class App extends React.Component {
   constructor(props) {
     super(props);
+    this.contentRef = React.createRef();
+    this.mainRef = React.createRef();
     this.sections = ['Skills', 'Training', 'Experiences', 'Projects'];
     this.state = {
       currentSection: 'Projects',
@@ -20,6 +22,8 @@ class App extends React.Component {
 
   setSection = (s) => {
     this.setState({currentSection: s});
+    this.contentRef.current.scrollTop = 0;
+    this.mainRef.current.scrollTop = 0;
   }
 
   render() {
@@ -32,12 +36,12 @@ class App extends React.Component {
       <>
         <ImageLoader/>
         <div className={`${bgstyle}`}></div>
-        <div className={styles.content}>
+        <div className={styles.content} ref={this.contentRef}>
         <Header sections={this.sections} currentSection={this.state.currentSection} setSection={this.setSection} />
           <aside>
             <Profile/>
           </aside>
-          <main>
+          <main ref={this.mainRef}>
             {this.state.currentSection === 'Skills' && <Skills/>}
             {this.state.currentSection === 'Training' && <Training/>}
             {this.state.currentSection === 'Experiences' && <Experiences/>}
