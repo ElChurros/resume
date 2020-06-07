@@ -37,15 +37,13 @@ class App extends React.Component {
   }
 
   render() {
-    const bgstyle = `${styles.bgImage} ${
-      this.context.tab === 'skills' ? styles.skillsbg
-      : this.context.tab === 'training' ? styles.trainingbg
-      : this.context.tab === 'experiences' ? styles.experiencebg
-      : styles.projectsbg}`;
     return (
       <>
         <ImageLoader/>
-        <div className={`${bgstyle}`}></div>
+        <div className={`${styles.bgImage} ${styles.skillsbg} ${this.context.tab === 'skills' && styles.showbg}`}/>
+        <div className={`${styles.bgImage} ${styles.trainingbg} ${this.context.tab === 'training' && styles.showbg}`}/>
+        <div className={`${styles.bgImage} ${styles.experiencesbg} ${this.context.tab === 'experiences' && styles.showbg}`}/>
+        <div className={`${styles.bgImage} ${styles.projectsbg} ${this.context.tab === 'projects' && styles.showbg}`}/>
         <div className={styles.content} ref={this.contentRef}>
         <Header/>
           <aside>
