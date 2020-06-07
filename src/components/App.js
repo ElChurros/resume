@@ -1,6 +1,8 @@
 import React from 'react';
-import {observer} from 'mobx-react';
+import { reaction } from 'mobx';
+import { observer } from 'mobx-react';
 
+import Context from '../context';
 import ImageLoader from './ImageLoader'
 import Header from './Header';
 import Profile from './Profile';
@@ -12,42 +14,48 @@ import langProvider from '../components/langProvider';
 import styles from './App.module.css';
 
 class App extends React.Component {
+  static contextType = Context;
+
   constructor(props) {
     super(props);
     this.contentRef = React.createRef();
     this.mainRef = React.createRef();
-    this.sections = ['Skills', 'Training', 'Experiences', 'Projects'];
-    this.state = {
-      currentSection: 'Skills',
-    }
   }
 
-  setSection = (s) => {
-    this.setState({currentSection: s});
-    this.contentRef.current.scrollTop = 0;
-    this.mainRef.current.scrollTop = 0;
+  componentDidMount() {
+    this.stopReactingToTabChange = reaction(
+      () => this.context.tab,
+      () => {
+        this.contentRef.current.scrollTop = 0;
+        this.mainRef.current.scrollTop = 0;
+      }
+    );
+  }
+
+  componentWillUnmount() {
+    this.stopReactingToTabChange();
   }
 
   render() {
     const bgstyle = `${styles.bgImage} ${
-      this.state.currentSection === 'Skills' ? styles.skillsbg
-      : this.state.currentSection === 'Training' ? styles.trainingbg
-      : this.state.currentSection === 'Experiences' ? styles.experiencebg
+      this.context.tab === 'skills' ? styles.skillsbg
+      : this.context.tab === 'training' ? styles.trainingbg
+      : this.context.tab === 'experiences' ? styles.experiencebg
       : styles.projectsbg}`;
     return (
       <>
         <ImageLoader/>
         <div className={`${bgstyle}`}></div>
         <div className={styles.content} ref={this.contentRef}>
-        <Header sections={this.sections} currentSection={this.state.currentSection} setSection={this.setSection} />
+        <Header/>
           <aside>
             <Profile/>
           </aside>
           <main ref={this.mainRef}>
-            {this.state.currentSection === 'Skills' && <Skills/>}
-            {this.state.currentSection === 'Training' && <Training/>}
-            {this.state.currentSection === 'Experiences' && <Experiences/>}
-            {this.state.currentSection === 'Projects' && <Projects/>}
+            {this.context.tab === 'skills' && <Skills/>}
+            {this.context.tab === 'training' && <Training/>}
+            {this.context.tab === 'experiences' && <Experiences/>}
+            {this.context.tab === 'projects' && <Projects/>}
           </main>
         </div>
       </>

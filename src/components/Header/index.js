@@ -1,10 +1,14 @@
 import React from 'react';
+import {observer} from 'mobx-react';
 
+import Context from '../../context';
 import SectionButton from './SectionButton';
 import LanguageSelector from './LanguageSelector';
 import styles from './Header.module.css'
 
 export class Header extends React.Component {
+  static contextType = Context;
+  
   constructor(props) {
     super(props);
     this.prevScrollTop = 0;
@@ -30,11 +34,10 @@ export class Header extends React.Component {
   }
 
   render() {
-    const {sections, currentSection, setSection, ...props} = this.props;
     return (
-      <nav className={`${styles.nav} ${this.state.hidden ? styles.hidden : ''}`} {...props}>
-        {sections.map(s =>
-          <SectionButton key={s} held={currentSection === s} id={`header.${s.toLowerCase()}`} onClick={(e) => setSection(s)}></SectionButton>
+      <nav className={`${styles.nav} ${this.state.hidden ? styles.hidden : ''}`} {...this.props}>
+        {this.context.tabs.map(t =>
+          <SectionButton key={t} held={this.context.tab === t} id={`header.${t}`} onClick={(e) => this.context.tab = t}></SectionButton>
         )}
         <LanguageSelector/>
       </nav>
@@ -42,4 +45,4 @@ export class Header extends React.Component {
   }
 }
 
-export default Header;
+export default observer(Header);
