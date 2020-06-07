@@ -2,6 +2,8 @@
 
 ## Todo
 - Content
+- Not scroll back top when clicking current section
+- Job title in Section
 
 # Original README from create-react-app
 

@@ -2,11 +2,12 @@ import React from 'react';
 
 import Section from '../Section';
 import styles from './Skills.module.css';
+import { FormattedMessage } from 'react-intl';
 
 export function Skills(props) {
   return (
     <>
-      <Section title={'Programming languages'}>
+      <Section id={'skills.proglang'}>
         <div className={styles.horizList}>
           <div className={styles.logoElem}>
             <img alt="HTML logo" width={'100px'} src={process.env.PUBLIC_URL + '/logos/html-logo.png'}/>
@@ -30,7 +31,7 @@ export function Skills(props) {
           </div>
         </div>
       </Section>
-      <Section title={'Web frameworks'}>
+      <Section id={'skills.webframeworks'}>
         <div className={styles.horizList}>
           <div className={styles.logoElem}>
             <img alt="React logo" width={'100px'} src={process.env.PUBLIC_URL + '/logos/react-logo.png'}/>
@@ -55,7 +56,7 @@ export function Skills(props) {
           </div>
         </div>
       </Section>
-      <Section title={"Mobile frameworks"}>
+      <Section id={"skills.mobframeworks"}>
         <div className={styles.horizList}>
           <div className={styles.logoElem}>
             <img alt="React logo" width={'100px'} src={process.env.PUBLIC_URL + '/logos/react-logo.png'}/>
@@ -67,7 +68,7 @@ export function Skills(props) {
           </div>
         </div>
       </Section>
-      <Section title={"Databases"}>
+      <Section id={"skills.dbs"}>
         <div className={styles.horizList}>
           <div className={styles.logoElem}>
             <img alt="MongoDB logo" width={'150px'} src={process.env.PUBLIC_URL + '/logos/mongodb-logo.png'}/>
@@ -77,7 +78,7 @@ export function Skills(props) {
           </div>
         </div>
       </Section>
-      <Section title="Development, integration and deployment tools">
+      <Section id="skills.tools">
         <div className={styles.horizList}>
           <div className={styles.logoElem}>
             <img style={{marginRight: '1rem'}} alt="Git logo" width={'80px'} src={process.env.PUBLIC_URL + '/logos/git-logo.png'}/>
@@ -99,19 +100,19 @@ export function Skills(props) {
           </div>
         </div>
       </Section>
-      <Section title="Languages">
+      <Section id="skills.lang">
         <div className={styles.horizList}>
           <div className={styles.verticalList}>
-            <h2>French</h2>
-            <span>Native tongue</span>
+            <h2><FormattedMessage id={'skills.lang.french'}/></h2>
+            <span><FormattedMessage id={'skills.lang.french.description'}/></span>
           </div>
           <div className={styles.verticalList}>
-            <h2>English</h2>
-            <span>Fluent level<br/>(TOEFL score 105, 1 year studying in California)</span>
+            <h2><FormattedMessage id={'skills.lang.english'}/></h2>
+            <span><FormattedMessage id={'skills.lang.english.description'}/></span>
           </div>
           <div className={styles.verticalList}>
-            <h2>German</h2>
-            <span>B1 level</span>
+            <h2><FormattedMessage id={'skills.lang.german'}/></h2>
+            <span><FormattedMessage id={'skills.lang.german.description'}/></span>
           </div>
         </div>
       </Section>

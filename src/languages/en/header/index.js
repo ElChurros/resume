@@ -1,6 +1,6 @@
 export default {
-    "header.skils": 'Skills',
+    "header.skills": 'Skills',
     "header.training": "Training",
-    "header.experience": "Experience",
+    "header.experiences": "Experience",
     "header.projects": "Projects",
 }

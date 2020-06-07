@@ -1,3 +1,9 @@
+.link {
+    font-family: 'Fira Code Light';
+    text-decoration: none;
+    color: var(--fg-normal-light);
+}
+
 .title {
     font-family: 'Fira Code Bold';
     margin-bottom: 0;
@@ -8,6 +14,7 @@
     text-align: right;
     margin-bottom: 2rem;
 }
+
 
 @media only screen and (max-width: 768px) {
     .location {

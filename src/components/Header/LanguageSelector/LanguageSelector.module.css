@@ -1,0 +1,24 @@
+.container {
+    flex-grow: 0;
+    overflow: visible;
+    width: 3rem;
+}
+
+.current {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 3rem;
+    height: 3rem;
+}
+
+.other {
+    position: relative;
+    width: 3rem;
+    height: 3rem;
+    top: 0;
+}
+
+.show {
+    top: 3rem;
+}

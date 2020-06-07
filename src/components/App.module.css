@@ -4,8 +4,8 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  filter: blur(8px);
-  -webkit-filter: blur(6px);
+  filter: blur(3px);
+  -webkit-filter: blur(3px);
   transition: .2s;
 }
 

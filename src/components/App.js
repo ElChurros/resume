@@ -1,4 +1,5 @@
 import React from 'react';
+import {observer} from 'mobx-react';
 
 import ImageLoader from './ImageLoader'
 import Header from './Header';
@@ -7,6 +8,7 @@ import Skills from './Skills';
 import Training from './Training';
 import Experiences from './Experiences';
 import Projects from './Projects';
+import langProvider from '../components/langProvider';
 import styles from './App.module.css';
 
 class App extends React.Component {
@@ -16,7 +18,7 @@ class App extends React.Component {
     this.mainRef = React.createRef();
     this.sections = ['Skills', 'Training', 'Experiences', 'Projects'];
     this.state = {
-      currentSection: 'Projects',
+      currentSection: 'Skills',
     }
   }
 
@@ -53,4 +55,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default langProvider(observer(App));

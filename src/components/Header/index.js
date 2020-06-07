@@ -1,6 +1,7 @@
 import React from 'react';
 
 import SectionButton from './SectionButton';
+import LanguageSelector from './LanguageSelector';
 import styles from './Header.module.css'
 
 export class Header extends React.Component {
@@ -33,8 +34,9 @@ export class Header extends React.Component {
     return (
       <nav className={`${styles.nav} ${this.state.hidden ? styles.hidden : ''}`} {...props}>
         {sections.map(s =>
-          <SectionButton key={s} held={currentSection === s} onClick={(e) => setSection(s)}>{s}</SectionButton>
+          <SectionButton key={s} held={currentSection === s} id={`header.${s.toLowerCase()}`} onClick={(e) => setSection(s)}></SectionButton>
         )}
+        <LanguageSelector/>
       </nav>
     );
   }

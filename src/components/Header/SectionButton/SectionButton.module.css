@@ -6,6 +6,7 @@ button {
     color: var(--fg-accent-light);
     flex: 1;
     font-family: 'Fira Code Light';
+    font-size: 0.9rem;
     font-weight: normal;
     cursor: pointer;
 }
