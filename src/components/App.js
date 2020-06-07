@@ -22,11 +22,6 @@ class App extends React.Component {
     }
   }
 
-  componentDidMount() {
-    console.log(navigator.language)
-    console.log(navigator.languages)
-  }
-
   setSection = (s) => {
     this.setState({currentSection: s});
     this.contentRef.current.scrollTop = 0;
