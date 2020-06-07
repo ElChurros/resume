@@ -16,7 +16,7 @@ export function Section({id, companyLink, titleLink, location, period, descripti
         {location && <span className={styles.location}><FormattedMessage id={`${id}.location`}/></span>}
         </span></p>}
       <div className={styles.content}>
-        {description && <span><FormattedMessage id={`${id}.description`} /></span>}
+        {description && <p><FormattedMessage id={`${id}.description`} /></p>}
         {children}
       </div>
     </>

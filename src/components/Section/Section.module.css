@@ -42,12 +42,12 @@
     padding-bottom: 4rem;
 }
 
-.content:last-child {
-    border-bottom: none;
+.content p{
+    text-align: justify;
 }
 
-.content > p {
-    text-align: justify;
+.content:last-child {
+    border-bottom: none;
 }
 
 .content > img {

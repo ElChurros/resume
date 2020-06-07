@@ -6,7 +6,7 @@ button {
     color: var(--fg-accent-light);
     flex: 1;
     font-family: 'Fira Code Light';
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: normal;
     cursor: pointer;
 }
@@ -16,4 +16,14 @@ button {
     background-color: var(--bg-accent-dark);
     font-weight: bolder;
     flex: 2;
+}
+
+@media only screen and (max-width: 768px) {
+    button {
+        font-size: 0.8rem;
+    }
+
+    .held {
+        flex: 1;
+    }
 }
