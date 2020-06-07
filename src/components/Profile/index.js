@@ -13,10 +13,10 @@ export function Profile(props) {
       <p className={styles.description}><FormattedMessage id={'profile.description'}/>
       </p>
       <div className={styles.contacts}>
-        <a href={'https://www.linkedin.com/in/arthur-lemaire-526269142/'}><i className='fab fa-linkedin'></i> LinkedIn</a>
-        <a href={'https://github.com/ElChurros'}><i className="fab fa-github"></i> Github</a>
-        <a href={'mailto:arthur.lemaire@epitech.eu'}><i className="fas fa-envelope"></i> Mail</a>
-        <a href={'tel:+33630700515'}><i className="fas fa-phone-alt"></i><FormattedMessage id={'profile.phone'}/></a>
+        <a href={'https://www.linkedin.com/in/arthur-lemaire-526269142/'} target='_blank' rel='noopener noreferrer'><i className='fab fa-linkedin'></i> LinkedIn</a>
+        <a href={'https://github.com/ElChurros'} target='_blank' rel='noopener noreferrer'><i className="fab fa-github"></i> Github</a>
+        <a href={'mailto:arthur.lemaire@epitech.eu'} target='_blank' rel='noopener noreferrer'><i className="fas fa-envelope"></i> Mail</a>
+        <a href={'tel:+33630700515'}><i className="fas fa-phone-alt" target='_blank' rel='noopener noreferrer'></i>{' '}<FormattedMessage id={'profile.phone'}/></a>
       </div>
     </>
   );
