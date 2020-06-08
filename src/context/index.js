@@ -2,9 +2,24 @@ import React from 'react';
 import {decorate, observable, computed} from 'mobx';
 
 class Store {
-  locale = 'en';
-  tabs = ['skills', 'training', 'experiences', 'projects'];
-  _tab = 0;
+  constructor() {
+    this.localeFolders = ["fr", "en"];
+    this.localeData = this.localeFolders.map((locale) => {
+      return require(`../languages/${locale}`).default;
+    });
+    this._locale = navigator.languages[0] === 'fr' ? 0 : 1;
+    this.tabs = ['skills', 'training', 'experiences', 'projects'];
+    this._tab = 0;
+  }
+
+
+  get locale() {
+    return this.localeFolders[this._locale];
+  }
+
+  set locale(l) {
+    this._locale = this.localeFolders.indexOf(l);
+  }
 
   get tab() {
     return this.tabs[this._tab];
@@ -16,19 +31,13 @@ class Store {
       return;
     this._tab = index;
   }
-  
-  toggleLocale = () => {
-    if (this.locale === 'en')
-      this.locale = 'fr';
-    else
-      this.locale = 'en';
-  }
 }
 
 decorate(Store, {
-  locale: observable,
+  _locale: observable,
   _tab: observable,
   tab: computed,
+  locale: computed,
 });
 
 export const Context = React.createContext(new Store());

@@ -18,7 +18,7 @@ export class LanguageSelector extends React.Component {
       <div className={styles.container}>
         <button
           className={`${styles.other} ${this.state.open ? styles.show : ''}`}
-          onClick={() => {this.context.toggleLocale(); this.setState({open: !this.state.open})}}
+          onClick={() => {this.context.locale = this.context.locale === 'en' ? 'fr' : 'en'; this.setState({open: !this.state.open})}}
         >
           <img
             alt={this.context.locale === 'en' ? 'French flag' : 'UK flag'}
