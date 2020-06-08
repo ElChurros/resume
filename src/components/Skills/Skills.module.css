@@ -2,13 +2,12 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
-}
-
-.horizList > * {
-    margin: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
 }
 
 .logoElem {
+    margin: 1rem;
     display: flex;
     flex-flow: row;
     justify-content: flex-start;
@@ -20,8 +19,9 @@
     flex-flow: column;
     justify-content: flex-start;
     align-items: center;
-    margin: 2rem;
+    margin: 1rem;
     min-width: 25%;
+    max-width: 50%;
 }
 
 .verticalList > span {

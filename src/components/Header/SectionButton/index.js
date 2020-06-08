@@ -6,8 +6,10 @@ import { FormattedMessage } from 'react-intl';
 export function SectionButton({id, held, className, ...props}) {
     className = held ? `${className} ${styles.held}` : className;
     return (
-        <button className={className} {...props}><FormattedMessage id={id}/>
-        </button>
+        <>
+            <button className={className} {...props}><FormattedMessage id={id}/>
+            </button>
+        </>
     )
 }
 

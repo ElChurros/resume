@@ -1,5 +1,18 @@
+.container {
+    border-bottom: solid 1px var(--fg-accent-dark-transparent);
+}
+
+.container:hover .link {
+    text-decoration: underline;
+}
+
+.container:last-child {
+    border-bottom: none;
+}
+
 .link {
-    font-family: 'Fira Code Light';
+    font-family: 'Fira Sans';
+    font-weight: 300;
     text-decoration: none;
     color: var(--fg-normal-light);
     transition: .5s;
@@ -10,8 +23,11 @@
 }
 
 .title {
-    font-family: 'Fira Code Bold';
+    font-family: 'Fira Sans';
+    font-style: bold;
+    font-size: 2rem;
     margin-bottom: 0;
+    margin-top: .5rem;
 }
 
 .location {
@@ -32,27 +48,20 @@
 }
 
 .complement {
-    font-family: 'Fira Code Light';
+    font-family: 'Fira Sans';
+    font-weight: 300;
     font-size: 18px;
-    font-weight: 400;
     padding-left: 1rem;
     padding-right: 1rem;
 }
 
 .content {
-    padding-top: 1rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    border-bottom: solid 1px var(--fg-accent-dark-transparent);
-    padding-bottom: 4rem;
+    padding-bottom: 2rem;
 }
 
 .content p{
     text-align: justify;
-}
-
-.content:last-child {
-    border-bottom: none;
+    line-height: 1.5;
 }
 
 .content > img {

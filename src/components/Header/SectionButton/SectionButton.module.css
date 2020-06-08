@@ -5,16 +5,20 @@ button {
     transition: 0.2s;
     color: var(--fg-accent-light);
     flex: 1;
-    font-family: 'Fira Code Light';
+    font-family: 'Fira Sans';
     font-size: 1rem;
     font-weight: normal;
     cursor: pointer;
 }
 
+button:hover:not(.held) {
+    flex: 1.5;
+}
+
 .held {
     color: var(--fg-normal-light);
     background-color: var(--bg-accent-dark);
-    font-weight: bolder;
+    font-weight: 700;
     flex: 2;
 }
 

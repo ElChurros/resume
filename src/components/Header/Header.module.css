@@ -11,11 +11,19 @@
     justify-content: flex-start;
     align-items: stretch;
     box-shadow: 0 0 5px 2px var(--shadow);
-    font-family: 'Fira Code Regular';
+    font-family: 'Fira sans';
     font-size: 1.25rem;
     transition: 0.4s;
 }
 
 .hidden {
     top: -3rem;
+}
+
+.sep {
+    position: relative;
+    width: 0;
+    height: 60%;
+    top: 20%;
+    border-right: solid 1px var(--bg-normal-light);
 }

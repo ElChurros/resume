@@ -36,8 +36,11 @@ export class Header extends React.Component {
   render() {
     return (
       <nav className={`${styles.nav} ${this.state.hidden ? styles.hidden : ''}`} {...this.props}>
-        {this.context.tabs.map(t =>
-          <SectionButton key={t} held={this.context.tab === t} id={`header.${t}`} onClick={(e) => this.context.tab = t}></SectionButton>
+        {this.context.tabs.map((t, i) =>
+          <React.Fragment key={t}>
+            <SectionButton held={this.context.tab === t} id={`header.${t}`} onClick={(e) => this.context.tab = t}></SectionButton>
+            {this.context._tab !== i && this.context._tab !== i + 1 && <div className={styles.sep} />}
+          </React.Fragment>
         )}
         <LanguageSelector/>
       </nav>

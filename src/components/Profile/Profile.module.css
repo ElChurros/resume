@@ -58,6 +58,9 @@
 
 .name {
     text-align: center;
+    font-family: 'Fira Sans';
+    font-weight: 700;
+    font-size: 2rem;
 }
 
 .bulletsep {
