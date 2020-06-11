@@ -7,7 +7,7 @@ class Store {
     this.localeData = this.localeFolders.map((locale) => {
       return require(`../languages/${locale}`).default;
     });
-    this._locale = navigator.languages[0] === 'fr' ? 0 : 1;
+    this._locale = navigator.languages[0] === 'en' ? 1 : 0;
     this.tabs = ['skills', 'training', 'experiences', 'projects'];
     this._tab = 0;
   }
