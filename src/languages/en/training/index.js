@@ -16,7 +16,7 @@ export default {
     "training.epfl" : "Federal Polytechnic School (EPFL)",
     "training.epfl.period" : "2014 - 2016",
     "training.epfl.location" : "Lausanne, CH",
-    "training.epfl.description" : "Courses taken",
+    "training.epfl.description" : "Propedeutic year in the Computer Science department. Here are some of the courses that I have taken:",
     "training.epfl.course1": "Analysis",
     "training.epfl.course2": "Linear algebra",
     "training.epfl.course3": "Object Oriented Programming",

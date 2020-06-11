@@ -3,7 +3,7 @@ export default {
     "experience.apm.jobtitle": "Développeur mobile",
     "experience.apm.period": "Mai - Août 2019",
     "experience.apm.location": "Genève, CH",
-    "experience.apm.description": "Developpement d'une application mobile (iOS et Android) permettant aux membres d'équipage de compagnies aériennes de visualiser et signer leur planning, ainsi que faire des demandes de congés.",
+    "experience.apm.description": "Développement d'une application mobile (iOS et Android) permettant aux membres d'équipage de compagnies aériennes de visualiser et signer leur planning, ainsi que faire des demandes de congés.",
     "experience.codeac": "Coding Academy",
     "experience.codeac.jobtitle": "Assistant pédagogique",
     "experience.codeac.period": "Septembre 2018 - Mars 2019",
