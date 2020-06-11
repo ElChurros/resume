@@ -1,5 +1,8 @@
 export default {
     "projects.eip": "Epitech Innovative Project",
     "projects.eip.period": "Projet de master",
-    "projects.eip.description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "projects.eip.description": "Application web dotée de toutes les fonctionnalités classiques d'un DAW (Digital Audio Workstation):",
+    "projects.eip.feature1": "Pistes MIDI et audio",
+    "projects.eip.feature2": "Déplacement, redimensionnement, étirement de samples et notes",
+    "projects.eip.feature3": "Chaines d'effets audio pour le mixage et le mastering",
 }

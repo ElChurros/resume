@@ -10,7 +10,11 @@ export function Profile(props) {
         <img alt="Profile" src={process.env.PUBLIC_URL + '/profile.png'}></img>
       </div>
       <h2 className={styles.name}>Arthur Lemaire</h2>
-      <p className={styles.description}><FormattedMessage id={'profile.description'}/>
+      <p className={styles.description}>
+        <FormattedMessage id={'profile.description'}/>
+      </p>
+      <p className={styles.looking}>
+        <FormattedMessage id='profile.looking'/>
       </p>
       <div className={styles.contacts}>
         <a href={'https://www.linkedin.com/in/arthur-lemaire-526269142/'} target='_blank' rel='noopener noreferrer'><i className='fab fa-linkedin'></i> LinkedIn</a>

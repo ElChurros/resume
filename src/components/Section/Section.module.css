@@ -10,9 +10,11 @@
     border-bottom: none;
 }
 
-.link {
-    font-family: 'Fira Sans';
+.container > h2 {
     font-weight: 300;
+}
+
+.link {
     text-decoration: none;
     color: var(--fg-normal-light);
     transition: .5s;
@@ -23,8 +25,8 @@
 }
 
 .title {
-    font-family: 'Fira Sans';
-    font-style: bold;
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 700;
     font-size: 2rem;
     margin-bottom: 0;
     margin-top: .5rem;
@@ -48,9 +50,9 @@
 }
 
 .complement {
-    font-family: 'Fira Sans';
+    font-family: 'Fira Sans', sans-serif;
     font-weight: 300;
-    font-size: 18px;
+    font-size: 1.25rem;
     padding-left: 1rem;
     padding-right: 1rem;
 }

@@ -11,8 +11,6 @@
     justify-content: flex-start;
     align-items: stretch;
     box-shadow: 0 0 5px 2px var(--shadow);
-    font-family: 'Fira sans';
-    font-size: 1.25rem;
     transition: 0.4s;
 }
 

@@ -56,14 +56,16 @@
     text-align: center;
 }
 
-.name {
+.looking {
     text-align: center;
-    font-family: 'Fira Sans';
     font-weight: 700;
-    font-size: 2rem;
 }
 
-.bulletsep {
-    padding-left: .2rem;
-    padding-right: .2rem;
+.name {
+    text-align: center;
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: .5rem;
+    margin-top: 1rem;
 }
