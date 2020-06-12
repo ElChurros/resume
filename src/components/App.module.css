@@ -14,19 +14,19 @@
 }
 
 .skillsbg {
-  background-image: url('/skills.jpg');
+  background-image: url('/skills.png');
 }
 
 .trainingbg {
-  background-image: url('/training.jpg');
+  background-image: url('/training.png');
 }
 
 .experiencesbg {
-  background-image: url('/experience.jpg');
+  background-image: url('/experience.png');
 }
 
 .projectsbg {
-  background-image: url('/projects.jpg');
+  background-image: url('/projects.png');
 }
 
 .showbg {

@@ -12,7 +12,7 @@ export class ImageLoader extends React.Component {
   componentDidMount() {
     this.bgs.forEach(name => {
       let img = new Image();
-      img.src = `${process.env.PUBLIC_URL}/${name}.jpg`;
+      img.src = `${process.env.PUBLIC_URL}/${name}.png`;
       this.images.push(img);
     })
     this.logos.forEach(name => {
