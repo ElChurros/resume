@@ -9,8 +9,7 @@
   background-size: cover;
   filter: blur(3px);
   -webkit-filter: blur(3px);
-  transition: opacity ease-in .5s;
-  opacity: 0;
+  transition: .5s;
 }
 
 .skillsbg {
@@ -27,11 +26,6 @@
 
 .projectsbg {
   background-image: url('/projects.png');
-}
-
-.showbg {
-  transition: opacity ease-out .5s;
-  opacity: 1;
 }
 
 .content {

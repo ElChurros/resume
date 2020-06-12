@@ -11,7 +11,7 @@ export function Projects(props) {
         <p><FormattedMessage id={'projects.eip.description'}/></p>
           <img alt="Jammee-Studio screenshot" className={styles.screenshot} src={process.env.PUBLIC_URL + '/studio.png'}></img>
           <ul>
-            {[...Array(3)].map((v, i) => <li><FormattedMessage id={`projects.eip.feature${i + 1}`}/></li>)}
+            {[...Array(3)].map((v, i) => <li key={i}><FormattedMessage id={`projects.eip.feature${i + 1}`}/></li>)}
           </ul>
       </Section>
     </>
