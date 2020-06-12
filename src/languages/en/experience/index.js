@@ -8,7 +8,7 @@ export default {
     "experience.codeac.jobtitle": "Teaching assistant",
     "experience.codeac.period": "September 2018 - March 2019",
     "experience.codeac.location": "Lyon, FR",
-    "experience.codeac.description": "Taught web development, assisted students in their projects, created and updated learning content. Taught technologies include React.js, AngularJs, Django, MongoDB, and SQL.",
+    "experience.codeac.description": "Taught web development two days a week, assisted students in their projects, created and updated learning content. Taught technologies include React.js, AngularJs, Django, MongoDB, and SQL.",
     "experience.sifoee": "Sifoee",
     "experience.sifoee.jobtitle": "Web developer",
     "experience.sifoee.period": "August - December 2017",

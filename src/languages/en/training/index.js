@@ -2,7 +2,7 @@ export default {
     "training.epitech" : "Epitech",
     "training.epitech.period" : "2016 - 2021",
     "training.epitech.location" : "Lyon, FR",
-    "training.epitech.description" : "Expert in information technology practical training with a project-based pedagogy, among which the most remarkable are:",
+    "training.epitech.description" : "Expert in computer science practical training with a project-based pedagogy, among which the most remarkable are :",
     "training.epitech.project1": "Master's project: Web Digital Audio Workstation application allowing the management of MIDI and audio tracks, the manipulation of sounds in the timeline and applying audio effects.",
     "training.epitech.project2": "VoIP application written in C++ with a client-server architecture and a peer-to-peer vocal communication",
     "training.epitech.project3": "RFC compliant HTTP server written in C++",

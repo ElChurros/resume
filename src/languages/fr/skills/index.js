@@ -1,5 +1,5 @@
 export default {
-    "skills.proglang": "Languages de programmation",
+    "skills.proglang": "Langages de programmation",
     "skills.webframeworks": "Frameworks web",
     "skills.mobframeworks": "Frameworks mobile",
     "skills.dbs": "Bases de données",
@@ -8,7 +8,7 @@ export default {
     "skills.lang.french": "Français",
     "skills.lang.french.description": "Langue maternelle",
     "skills.lang.english": "Anglais",
-    "skills.lang.english.description": "Excellent niveau (105 au TOEFL avant d'aller étudier un an aux Etats-Unis)",
+    "skills.lang.english.description": "Excellent niveau (105 au TOEFL avant une année d'études aux Etats-Unis)",
     "skills.lang.german": "Allemand",
     "skills.lang.german.description": "niveau B1",
 }
