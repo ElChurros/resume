@@ -8,7 +8,7 @@ class Store {
       return require(`../languages/${locale}`).default;
     });
     this._locale = navigator.languages[0] === 'en' ? 1 : 0;
-    this.tabs = ['skills', 'training', 'experiences', 'projects'];
+    this.tabs = ['skills', 'experiences', 'projects', 'training'];
     this._tab = 0;
   }
 

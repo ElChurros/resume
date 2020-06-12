@@ -10,6 +10,7 @@ export function Profile(props) {
         <img alt="Profile" src={process.env.PUBLIC_URL + '/profile.png'}></img>
       </div>
       <h2 className={styles.name}>Arthur Lemaire</h2>
+      <h3><FormattedMessage id={'profile.title'}/></h3>
       <p className={styles.description}>
         <FormattedMessage id={'profile.description'}/>
       </p>

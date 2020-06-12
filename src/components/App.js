@@ -3,6 +3,7 @@ import { reaction } from 'mobx';
 import { observer } from 'mobx-react';
 
 import Context from '../context';
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import ImageLoader from './ImageLoader'
 import Header from './Header';
 import Profile from './Profile';
@@ -38,7 +39,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <>
+      <Router>
         <ImageLoader/>
         <div className={`${styles.bgImage} ${styles.skillsbg} ${this.context.tab === 'skills' && styles.showbg}`}/>
         <div className={`${styles.bgImage} ${styles.trainingbg} ${this.context.tab === 'training' && styles.showbg}`}/>
@@ -50,13 +51,24 @@ class App extends React.Component {
             <Profile/>
           </aside>
           <main ref={this.mainRef}>
-            {this.context.tab === 'skills' && <Skills/>}
-            {this.context.tab === 'training' && <Training/>}
-            {this.context.tab === 'experiences' && <Experiences/>}
-            {this.context.tab === 'projects' && <Projects/>}
+            <Switch>
+              <Route path="/skills">
+                <Skills/>
+              </Route>
+              <Route path="/experiences">
+                <Experiences/>
+              </Route>
+              <Route path="/projects">
+                <Projects/>
+              </Route>
+              <Route path="/training">
+                <Training/>
+              </Route>
+              <Redirect exact from="/" to="/skills" />
+            </Switch>
           </main>
         </div>
-      </>
+      </Router>
     );
   }
 }
