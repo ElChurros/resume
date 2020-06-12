@@ -5,7 +5,7 @@ import { FormattedMessage } from 'react-intl';
 
 export function Section({id, companyLink, titleLink, location, period, description, children, ...props}) {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} {...props}>
       <h1 className={styles.title}>
         {titleLink ? <a className={styles.link} href={titleLink} target='_blank' rel='noopener noreferrer'><FormattedMessage id={companyLink ? `${id}.jobtitle` : id}/></a>
           :<FormattedMessage id={companyLink ? `${id}.jobtitle` : id}/>}
