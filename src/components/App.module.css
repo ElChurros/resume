@@ -73,6 +73,10 @@
   border-radius: 3px;
 }
 
+.content aside:hover a {
+  text-decoration: underline;
+}
+
 .content main {
   display: block;
   position: fixed;

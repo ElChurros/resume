@@ -47,7 +47,7 @@ class App extends React.Component {
     if (prevProps.location.pathname !== '/' && prevProps.location.pathname !== this.props.location.pathname) {
       this.mainRef.current.scrollTop = 0;
       this.mainRef.current.scrollIntoView({ behavior: 'smooth' });
-      setTimeout(() => this.setState({hideNavBar: true}), 500);
+      setTimeout(() => this.setState({hideNavBar: true}), 1000);
     }
   }
 

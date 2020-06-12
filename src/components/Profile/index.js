@@ -1,5 +1,6 @@
 import React from 'react';
-import {FormattedMessage} from 'react-intl';
+import { FormattedMessage } from 'react-intl';
+import { Link } from 'react-router-dom';
 
 import styles from './Profile.module.css';
 
@@ -13,6 +14,7 @@ export function Profile(props) {
       <h3><FormattedMessage id={'profile.title'}/></h3>
       <p className={styles.description}>
         <FormattedMessage id={'profile.description'}/>
+        <Link to='/projects'><FormattedMessage id={'profile.description.projectlink'}/></Link>.
       </p>
       <p className={styles.looking}>
         <FormattedMessage id='profile.looking'/>
