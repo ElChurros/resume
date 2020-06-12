@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import {observer} from 'mobx-react';
 import {withRouter} from 'react-router-dom';
 
 import Context from '../../context';
@@ -24,4 +23,4 @@ export function Header(props) {
   );
 }
 
-export default observer(withRouter(Header));
+export default withRouter(Header);

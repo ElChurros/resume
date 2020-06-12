@@ -1,6 +1,4 @@
 import React from 'react';
-import { reaction } from 'mobx';
-import { observer } from 'mobx-react';
 import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
 
 import Context from '../context';
@@ -89,4 +87,4 @@ class App extends React.Component {
   }
 }
 
-export default langProvider(observer(withRouter(App)));
+export default langProvider(withRouter(App));
