@@ -18,6 +18,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "deploy": "scp -Cpr ./build/* debian@arthurlemaire.fr:/var/www/resume/html",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
