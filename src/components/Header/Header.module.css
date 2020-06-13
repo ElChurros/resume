@@ -4,6 +4,7 @@
     left: 0;
     width: 100vw;
     height: 3rem;
+    z-index: 1;
     background-color: var(--bg-normal-dark);
     display: flex;
     flex-flow: row;
