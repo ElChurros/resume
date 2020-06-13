@@ -11,15 +11,17 @@ export function Header(props) {
   const { history, location, match, staticContext, to, onClick, hidden, ...rest } = props;
   const tabIndex = context.tabs.indexOf(location.pathname.slice(1));
   return (
-    <nav className={`${styles.nav} ${hidden ? styles.hidden : ''}`} {...rest}>
-      {context.tabs.map((t, i) =>
-        <React.Fragment key={t}>
-          <SectionButton held={location.pathname === `/${t}`} tab={t}></SectionButton>
-            {tabIndex !== i && tabIndex !== i + 1 && <div className={styles.sep} />}
-        </React.Fragment>
-      )}
+    <div className={`${styles.header} ${hidden ? styles.hidden : ''}`} {...rest} >
+      <nav>
+        {context.tabs.map((t, i) =>
+          <React.Fragment key={t}>
+            <SectionButton held={location.pathname === `/${t}`} tab={t}></SectionButton>
+              {tabIndex !== i && tabIndex !== i + 1 && <div className={styles.sep} />}
+          </React.Fragment>
+        )}
+      </nav>
       <LanguageSelector/>
-    </nav>
+    </div>
   );
 }
 

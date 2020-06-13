@@ -1,16 +1,27 @@
-.nav {
+.header {
     position: sticky;
     top: 0;
     left: 0;
-    z-index: 1;
     width: 100vw;
     height: 3rem;
     background-color: var(--bg-normal-dark);
     display: flex;
     flex-flow: row;
+    flex-wrap: nowrap;
     justify-content: flex-start;
     align-items: stretch;
     box-shadow: 0 0 5px 2px var(--shadow);
+    transition: 0.4s;
+    overflow-x: auto;
+}
+
+.header nav {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: nowrap;
+    flex-grow: 1;
+    justify-content: flex-start;
+    align-items: stretch;
     transition: 0.4s;
     overflow-x: auto;
 }
