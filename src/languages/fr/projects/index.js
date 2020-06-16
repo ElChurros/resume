@@ -5,4 +5,12 @@ export default {
     "projects.eip.feature1": "Pistes MIDI et audio",
     "projects.eip.feature2": "Déplacement, redimensionnement, étirement de samples et notes",
     "projects.eip.feature3": "Chaînes d'effets audio pour le mixage et le mastering",
+    "projects.eip.stack": "Ce projet est développé en utilisant les technologies suivantes:",
+    "projects.eip.tech1": "Front-end en HTML5, CSS et Javascript avec le framework React.js",
+    "projects.eip.tech2": "Traitement de signal et routage audio via WebAudio (API navigateur)",
+    "projects.eip.tech3": "Backend en Python avec le framework Django",
+    "projects.eip.tech4": "Workflow de développement 'GitLab flow'",
+    "projects.eip.tech5": "Tests automatisés via GitLab CI/CD",
+    "projects.eip.tech6": "Conteneurisation avec Docker",
+    "projects.eip.tech7": "Serveur HTTP NginX",
 }

@@ -9,10 +9,14 @@ export function Projects(props) {
     <>
       <Section id='projects.eip' period>
         <p><FormattedMessage id={'projects.eip.description'}/></p>
-          <img alt="Jammee-Studio screenshot" className={styles.screenshot} src={process.env.PUBLIC_URL + '/studio.png'}></img>
-          <ul>
-            {[...Array(3)].map((v, i) => <li key={i}><FormattedMessage id={`projects.eip.feature${i + 1}`}/></li>)}
-          </ul>
+        <ul>
+          {[...Array(3)].map((v, i) => <li key={i}><FormattedMessage id={`projects.eip.feature${i + 1}`}/></li>)}
+        </ul>
+        <img alt="Jammee-Studio screenshot" className={styles.screenshot} src={process.env.PUBLIC_URL + '/studio.png'}></img>
+        <p><FormattedMessage id={'projects.eip.stack'} /></p>
+        <ul>
+          {[...Array(7)].map((v, i) => <li key={i}><FormattedMessage id={`projects.eip.tech${i + 1}`} /></li>)}
+        </ul>
       </Section>
     </>
   );
