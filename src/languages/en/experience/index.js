@@ -1,4 +1,9 @@
 export default {
+    "experience.audiowizard": "Audiowizard",
+    "experience.audiowizard.jobtitle": "Web developer",
+    "experience.audiowizard.period": "September 2020 - February 2021",
+    "experience.audiowizard.location": "Lyon, FR",
+    "experience.audiowizard.description": "Development of a web application for hearing care professionnals featuring personalized patient follow-up, social security connections, stock and cash fund management.",
     "experience.apm": "APM Technologies",
     "experience.apm.jobtitle": "Mobile developer",
     "experience.apm.period": "May - August 2019",

@@ -1,4 +1,9 @@
 export default {
+    "experience.audiowizard": "Audiowizard",
+    "experience.audiowizard.jobtitle": "Développeur web",
+    "experience.audiowizard.period": "Septembre 2020 - Février 2021",
+    "experience.audiowizard.location": "Lyon, FR",
+    "experience.audiowizard.description": "Développement d'une application Web pour audioprothésistes incluant un suivi de patient personnalisé, des intégrations avec la sécurité sociale et de la gestion de stock et de caisse.",
     "experience.apm": "APM Technologies",
     "experience.apm.jobtitle": "Développeur mobile",
     "experience.apm.period": "Mai - Août 2019",
