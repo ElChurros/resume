@@ -19,4 +19,9 @@ export default {
     "experience.sifoee.period": "August - December 2017",
     "experience.sifoee.location": "Lyon, FR",
     "experience.sifoee.description": "Conveived and developped an e-learning module on the operation of generators of power plants.",
+    "experience.epitech": "Epitech",
+    "experience.epitech.jobtitle": "Pedagogical Assistant",
+    "experience.epitech.period": "March 2021 - August 2022",
+    "experience.epitech.location": "Lyon, FR",
+    "experience.epitech.description": "Assisted 1st to 4th year Epitech students in the realisation of academical projects in C/C, Python, PHP and Javascript. Created and updated learning content for related modules.",
 }

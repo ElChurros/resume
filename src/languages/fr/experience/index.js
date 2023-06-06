@@ -19,4 +19,9 @@ export default {
     "experience.sifoee.period": "Août - Décembre 2017",
     "experience.sifoee.location": "Lyon, FR",
     "experience.sifoee.description": "Conception d'un module d'e-learning sur le fonctionnement de l'alternateur des centrales de production électrique.",
+    "experience.epitech": "Epitech",
+    "experience.epitech.jobtitle": "Accompagnateur Pédagogique",
+    "experience.epitech.period": "Mars 2021 - Août 2022",
+    "experience.epitech.location": "Lyon, FR",
+    "experience.epitech.description": "Accompagnement d'étudiants de la 1ère à la 4ème année d'Epitech dans la réalisation de projets académiques en C/C++, Python, PHP et Javascript. Création et mise à jour de contenu pédagogique pour ces matières. Animation d'ateliers à destination des étudiants dans le HUB Innovation de l'école. Correction et évaluation de projets.",
 }
