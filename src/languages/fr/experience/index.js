@@ -24,4 +24,9 @@ export default {
     "experience.epitech.period": "Mars 2021 - Août 2022",
     "experience.epitech.location": "Lyon, FR",
     "experience.epitech.description": "Accompagnement d'étudiants de la 1ère à la 4ème année d'Epitech dans la réalisation de projets académiques en C/C++, Python, PHP et Javascript. Création et mise à jour de contenu pédagogique pour ces matières. Animation d'ateliers à destination des étudiants dans le HUB Innovation de l'école. Correction et évaluation de projets.",
+    "experience.supbiotech": "Sup'Biotech",
+    "experience.supbiotech.jobtitle": "Formateur",
+    "experience.supbiotech.period": "Septembre 2021 - Août 2022",
+    "experience.supbiotech.location": "Lyon, FR",
+    "experience.supbiotech.description": "Enseignement des cours d'informatique aux étudiants de 1ère année. Animation et correction de TDs et TPs couvrant la bureautique, les bases des languages HTML et CSS ansi que l'algorithmie appliquée à la biologie génétique en Python (parsing, analyse et transformation de données génétiques).",
 }
