@@ -2,7 +2,7 @@
     border-bottom: solid 1px var(--fg-accent-dark-transparent);
 }
 
-.container:hover .link {
+.container:hover a {
     text-decoration: underline;
 }
 
@@ -14,13 +14,13 @@
     font-weight: 300;
 }
 
-.link {
+.container a {
     text-decoration: none;
     color: var(--fg-normal-light);
     transition: .5s;
 }
 
-.link:hover {
+.container a:hover {
     color: var(--fg-accent-light);
 }
 

@@ -28,6 +28,7 @@ const projects = {
     "projects.audiorooms.tech3": "Expressjs to serve the application and process audio file requests",
     "projects.audiorooms.tech4": "Socket.io for bi-directional event-based communication between clients and server",
     "projects.audiorooms.tech5": "WebRTC for peer-to-peer audio streaming with other members of the room",
+    "projects.audiorooms.sourcecode": "The source code for this app id publicly available on ",
 }
 
 export default projects

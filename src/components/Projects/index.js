@@ -17,6 +17,7 @@ const Projects = () => {
         <ul>
           {[...Array(5)].map((v, i) => <li><FormattedMessage id={`projects.audiorooms.tech${i + 1}`}/></li>) }
         </ul>
+        <p><FormattedMessage id="projects.audiorooms.sourcecode"/><a href='https://github.com/ElChurros/AudioRooms' target='_blank' rel='noopener noreferrer'><i className="fab fa-github" /> Github</a></p>
       </Section>
       <Section id='projects.eip' period location>
         <p><FormattedMessage id={'projects.eip.description'}/></p>

@@ -5,10 +5,10 @@ const Section = ({ id, companyLink, titleLink, location, period, description, ch
   return (
     <div className={styles.container} {...props}>
       <h1 className={styles.title}>
-        {titleLink ? <a className={styles.link} href={titleLink} target='_blank' rel='noopener noreferrer'><FormattedMessage id={companyLink ? `${id}.jobtitle` : id} /></a>
+        {titleLink ? <a href={titleLink} target='_blank' rel='noopener noreferrer'><FormattedMessage id={companyLink ? `${id}.jobtitle` : id} /></a>
           : <FormattedMessage id={companyLink ? `${id}.jobtitle` : id} />}
       </h1>
-      {companyLink && <h2><a className={styles.link} href={companyLink} target='_blank' rel='noopener noreferrer'><FormattedMessage id={id} /></a></h2>}
+      {companyLink && <h2><a href={companyLink} target='_blank' rel='noopener noreferrer'><FormattedMessage id={id} /></a></h2>}
       {(location || period) && <p className={styles.complement}><span>
         {period && <span className={styles.period}><FormattedMessage id={`${id}.period`} /></span>}
         {location && <span className={styles.location}><FormattedMessage id={`${id}.location`} /></span>}
