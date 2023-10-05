@@ -1,45 +1,36 @@
-import React from 'react';
+import { useContext, useState, useEffect, useRef } from 'react';
 import Context from '../../../context';
-
+import frenchFlag from '../../../assets/french-flag.png'
+import ukFlag from '../../../assets/uk-flag.png'
 import styles from './LanguageSelector.module.css';
 
-export class LanguageSelector extends React.Component {
-  static contextType = Context;
-  
-  constructor(props) {
-    super(props);
-    this.endRef = React.createRef();
-    this.state = {
-      open: false,
-    }
-  }
+const LanguageSelector = () => {
+  const context = useContext(Context)
+  const endRef = useRef()
+  const [open, setOpen] = useState(false)
 
-  componentDidUpdate() {
-    if (this.state.open)
-      this.endRef.current.scrollIntoView({ behavior: 'smooth' });
-  }
+  useEffect(() => {
+    if (open)
+      endRef.current.scrollIntoView({behavior: 'smooth'})
+  }, [open])
 
-  render() {
-    return (
-      <div className={styles.container}>
-        {this.state.open && <button onClick={() => {this.context.locale = this.context.locale === 'en' ? 'fr' : 'en'; this.setState({open: !this.state.open})}}>
-          <img
-            alt={this.context.locale === 'en' ? 'French flag' : 'UK flag'}
-            width={'25px'}
-            src={process.env.PUBLIC_URL + this.context.locale === 'en' ? '/french-flag.png' : '/uk-flag.png'}
-          />
-        </button>}
-        <button onClick={() => {this.setState({open: !this.state.open})}}>
-        <img
-            alt={this.context.locale === 'fr' ? 'French flag' : 'UK flag'}
-            width={'25px'}
-            src={process.env.PUBLIC_URL + this.context.locale === 'fr' ? '/french-flag.png' : '/uk-flag.png'}
-          />
-        </button>
-        <div ref={this.endRef}/>
-      </div>
-    );
-  }
+  return <div className={styles.container}>
+    {open && <button onClick={() => {context.locale = context.locale === 'en' ? 'fr' : 'en'; setOpen(prev => !prev)}}>
+      <img
+        alt={context.locale === 'en' ? 'French flag' : 'UK flag'}
+        width={'25px'}
+        src={context.locale === 'en' ? frenchFlag : ukFlag}
+      />
+    </button>}
+    <button onClick={() => setOpen(prev => !prev)}>
+    <img
+        alt={context.locale === 'fr' ? 'French flag' : 'UK flag'}
+        width={'25px'}
+        src={context.locale === 'fr' ? frenchFlag : ukFlag}
+      />
+    </button>
+    <div ref={endRef}/>
+  </div>
 }
 
 export default LanguageSelector;

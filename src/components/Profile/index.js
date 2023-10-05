@@ -1,14 +1,13 @@
-import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import { Link } from 'react-router-dom';
-
+import profile from '../../assets/profile.png'
 import styles from './Profile.module.css';
 
-export function Profile(props) {
+const Profile = () => {
   return (
     <>
       <div className={styles.imagemask}>
-        <img alt="Profile" src={process.env.PUBLIC_URL + '/profile.png'}></img>
+        <img alt="Profile" src={profile}></img>
       </div>
       <h2 className={styles.name}>Arthur Lemaire</h2>
       <h3><FormattedMessage id={'profile.title'}/></h3>
@@ -16,9 +15,9 @@ export function Profile(props) {
         <FormattedMessage id={'profile.description'}/>
         <Link to='/projects'><FormattedMessage id={'profile.description.projectlink'}/></Link>.
       </p>
-      <p className={styles.looking}>
+      {/* <p className={styles.looking}>
         <FormattedMessage id='profile.looking'/>
-      </p>
+      </p> */}
       <div className={styles.contacts}>
         <a href={'https://www.linkedin.com/in/arthur-lemaire-526269142/'} target='_blank' rel='noopener noreferrer'><i className='fab fa-linkedin'></i> LinkedIn</a>
         <a href={'https://github.com/ElChurros'} target='_blank' rel='noopener noreferrer'><i className="fab fa-github"></i> Github</a>

@@ -1,9 +1,7 @@
-import React from 'react';
-
-import Section from '../Section';
 import { FormattedMessage } from 'react-intl';
+import Section from '../Section';
 
-export function Training(props) {
+const Training = () => {
   return (
     <>
       <Section id='training.epitech' location period titleLink="https://www.epitech.eu">

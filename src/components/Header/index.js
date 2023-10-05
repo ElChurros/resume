@@ -1,23 +1,22 @@
-import React, { useContext } from 'react';
-import {withRouter} from 'react-router-dom';
-
-import Context from '../../context';
+import { useContext, Fragment } from 'react';
+import { useLocation } from 'react-router-dom';
 import SectionButton from './SectionButton';
 import LanguageSelector from './LanguageSelector';
+import Context from '../../context';
 import styles from './Header.module.css'
 
-export function Header(props) {
+const Header = ({hidden, ...props}) => {
   const context = useContext(Context);
-  const { history, location, match, staticContext, to, onClick, hidden, ...rest } = props;
+  const location = useLocation()
   const tabIndex = context.tabs.indexOf(location.pathname.slice(1));
   return (
-    <div className={`${styles.header} ${hidden ? styles.hidden : ''}`} {...rest} >
+    <div className={`${styles.header} ${hidden ? styles.hidden : ''}`} {...props} >
       <nav>
         {context.tabs.map((t, i) =>
-          <React.Fragment key={t}>
+          <Fragment key={t}>
             <SectionButton held={location.pathname === `/${t}`} tab={t}></SectionButton>
               {tabIndex !== i && tabIndex !== i + 1 && <div className={styles.sep} />}
-          </React.Fragment>
+          </Fragment>
         )}
       </nav>
       <LanguageSelector/>
@@ -25,4 +24,4 @@ export function Header(props) {
   );
 }
 
-export default withRouter(Header);
+export default Header;

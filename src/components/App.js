@@ -1,7 +1,5 @@
-import React from 'react';
-import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
-
-import Context from '../context';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import ImageLoader from './ImageLoader'
 import Header from './Header';
 import Profile from './Profile';
@@ -12,79 +10,73 @@ import Projects from './Projects';
 import langProvider from '../components/langProvider';
 import styles from './App.module.css';
 
-class App extends React.Component {
-  static contextType = Context;
+const App = () => {
+  const contentRef = useRef()
+  const mainRef = useRef()
+  const prevScrollTop = useRef(0)
+  const [hideNavBar, setHideNavBar] = useState(false)
+  const location = useLocation()
+  const prevLocation = useRef(location)
 
-  constructor(props) {
-    super(props);
-    this.contentRef = React.createRef();
-    this.mainRef = React.createRef();
-    this.prevScrollTop = 0;
-    this.state = {
-      hideNavBar: false,
+  const handleScroll = useCallback((e) => {
+    if (e.target.scrollTop > prevScrollTop.current)
+      setHideNavBar(true)
+    else if (e.target.scrollTop < prevScrollTop.current)
+      setHideNavBar(false)
+    prevScrollTop.current = e.target.scrollTop;
+  }, [])
+
+  useEffect(() => {
+    document.addEventListener('scroll', handleScroll, true);
+    return () => {
+      document.removeEventListener('scroll', handleScroll);
     }
-  }
+  }, [handleScroll])
 
-  componentDidMount() {
-    document.addEventListener('scroll', this.handleScroll, true);
-  }
-
-  componentWillUnmount() {
-    document.removeEventListener('scroll', this.handleScroll);
-  }
-
-  handleScroll = (e) => {
-    if (e.target.scrollTop > this.prevScrollTop && this.state.hideNavBar === false)
-      this.setState({hideNavBar: true});
-    else if (e.target.scrollTop < this.prevScrollTop && this.state.hideNavBar === true)
-      this.setState({hideNavBar: false});
-    this.prevScrollTop = e.target.scrollTop;
-  }
-
-  componentDidUpdate(prevProps) {
-    if (prevProps.location.pathname !== '/' && prevProps.location.pathname !== this.props.location.pathname) {
-      this.mainRef.current.scrollTop = 0;
-      this.mainRef.current.scrollIntoView({ behavior: 'smooth' });
-      setTimeout(() => this.setState({hideNavBar: true}), 1000);
+  useEffect(() => {
+    if (!prevLocation.current) {
+      prevLocation.current = location
+      return
     }
-  }
+    if (prevLocation.current.pathname !== '/' && prevLocation.current.pathname !== location.pathname) {
+      mainRef.current.scrollTop = 0;
+      mainRef.current.scrollIntoView({ behavior: 'smooth' });
+      setTimeout(() => setHideNavBar(true), 1000);
+    }
+    prevLocation.current = location
+  }, [location])
 
-  render() {
-    const bgStyle = `${styles.bgImage} ${
-      this.props.location.pathname === '/skills' ? styles.skillsbg
-      : this.props.location.pathname === '/experiences' ? styles.experiencesbg
-      : this.props.location.pathname === '/projects' ? styles.projectsbg
-      : styles.trainingbg}`;
-    return (
-      <>
-        <ImageLoader/>
-        <div className={bgStyle}/>
-        <div className={styles.content} ref={this.contentRef}>
-          <Header hidden={this.state.hideNavBar}/>
-          <aside>
-            <Profile/>
-          </aside>
-          <main ref={this.mainRef}>
-            <Switch>
-              <Route path="/skills">
-                <Skills/>
-              </Route>
-              <Route path="/experiences">
-                <Experiences/>
-              </Route>
-              <Route path="/projects">
-                <Projects/>
-              </Route>
-              <Route path="/training">
-                <Training/>
-              </Route>
-              <Redirect exact from="/" to="/skills" />
-            </Switch>
-          </main>
-        </div>
-      </>
-    );
-  }
+  const bgStyle = useMemo(() => {
+    return `${styles.bgImage} ${location.pathname === '/skills'
+      ? styles.skillsbg
+      : location.pathname === '/experiences'
+        ? styles.experiencesbg
+        : location.pathname === '/projects'
+          ? styles.projectsbg
+          : styles.trainingbg}`;
+  }, [location])
+
+  return (
+    <>
+      <ImageLoader />
+      <div className={bgStyle} />
+      <div className={styles.content} ref={contentRef}>
+        <Header hidden={hideNavBar} />
+        <aside>
+          <Profile />
+        </aside>
+        <main ref={mainRef}>
+          <Routes>
+            <Route path="/skills" element={<Skills />} />
+            <Route path="/experiences" element={<Experiences />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/training" element={<Training />} />
+            <Route path='/' index element={<Navigate to='/skills' replace />} />
+          </Routes>
+        </main>
+      </div>
+    </>
+  );
 }
 
-export default langProvider(withRouter(App));
+export default langProvider(App);

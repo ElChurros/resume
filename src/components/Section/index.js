@@ -1,9 +1,7 @@
-import React from 'react';
-
-import styles from './Section.module.css';
 import { FormattedMessage } from 'react-intl';
+import styles from './Section.module.css';
 
-export function Section({id, companyLink, titleLink, location, period, description, children, ...props}) {
+const Section = ({id, companyLink, titleLink, location, period, description, children, ...props}) => {
   return (
     <div className={styles.container} {...props}>
       <h1 className={styles.title}>
