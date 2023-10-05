@@ -17,6 +17,8 @@ import mongodb from '../../assets/logos/mongodb-logo.png'
 import sql from '../../assets/logos/sql-logo.png'
 import git from '../../assets/logos/git-logo.png'
 import docker from '../../assets/logos/docker-logo.png'
+import ansible from '../../assets/logos/ansible-logo.png'
+import jenkins from '../../assets/logos/jenkins-logo.png'
 import nginx from '../../assets/logos/nginx-logo.png'
 import apache from '../../assets/logos/apache-logo.png'
 import circleci from '../../assets/logos/circleci-logo.png'
@@ -106,6 +108,14 @@ const Skills = () => {
           <div className={styles.logoElem}>
             <img style={{marginRight: '1rem'}} alt="Docker logo" width={'80px'} src={docker}/>
             <span>Docker</span>
+          </div>
+          <div className={styles.logoElem}>
+            <img style={{marginRight: '1rem', filter: 'invert(1)'}} alt="Ansible logo" width={'80px'} src={ansible}/>
+            <span>Ansible</span>
+          </div>
+          <div className={styles.logoElem}>
+            <img style={{marginRight: '1rem'}} alt="Jenkins logo" width={'80px'} src={jenkins}/>
+            <span>Jenkins</span>
           </div>
           <div className={styles.logoElem}>
             <img alt="NginX logo" width={'120px'} src={nginx}/>
