@@ -1,6 +1,7 @@
-export default {
+const projects = {
     "projects.eip": "Epitech Innovative Project",
-    "projects.eip.period": "Master's project",
+    "projects.eip.period": "October 2019 - March 2021",
+    "projects.eip.location": "Master's project",
     "projects.eip.description": "Web application with all the traditionnal features of a Digital Audio Workstation:",
     "projects.eip.feature1": "MIDI and audio tracks",
     "projects.eip.feature2": "Moving, croping and stretching of audio samples and notes",
@@ -13,4 +14,20 @@ export default {
     "projects.eip.tech5": "Tests automation with GitLab CI/CD",
     "projects.eip.tech6": "Containerisation with Docker",
     "projects.eip.tech7": "NginX HTTP server",
+    "projects.audiorooms": "AudioRooms",
+    "projects.audiorooms.period": "September 2023",
+    "projects.audiorooms.location": "Personal project",
+    "projects.audiorooms.description": "Web application experimenting with spacialization features of the WebAudio API:",
+    "projects.audiorooms.feature1": "Freely create or join other users in an existing room",
+    "projects.audiorooms.feature2": "Move around with your keyboard on the map",
+    "projects.audiorooms.feature3": "Add, move and delete audio sources on the map",
+    "projects.audiorooms.feature4": "Audio playback accounting for distance from sources as well as the direction you are facing",
+    "projects.audiorooms.stack": "This project was developped with the help of:",
+    "projects.audiorooms.tech1": "React & CSS for the frontend",
+    "projects.audiorooms.tech2": "WebAudio (browser API) for audio spacialization",
+    "projects.audiorooms.tech3": "Expressjs to serve the application and process audio file requests",
+    "projects.audiorooms.tech4": "Socket.io for bi-directional event-based communication between clients and server",
+    "projects.audiorooms.tech5": "WebRTC for peer-to-peer audio streaming with other members of the room",
 }
+
+export default projects

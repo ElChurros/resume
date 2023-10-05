@@ -1,4 +1,4 @@
-export default {
+const experience = {
     "experience.audiowizard": "Audiowizard",
     "experience.audiowizard.jobtitle": "Développeur web",
     "experience.audiowizard.period": "Septembre 2020 - Février 2021",
@@ -30,3 +30,5 @@ export default {
     "experience.supbiotech.location": "Lyon, FR",
     "experience.supbiotech.description": "Enseignement des cours d'informatique aux étudiants de 1ère année. Animation et correction de TDs et TPs couvrant la bureautique, les bases des languages HTML et CSS ansi que l'algorithmie appliquée à la biologie génétique en Python (parsing, analyse et transformation de données génétiques).",
 }
+
+export default experience

@@ -1,4 +1,4 @@
-export default {
+const projects = {
     "projects.eip": "Epitech Innovative Project",
     "projects.eip.period": "Projet de master",
     "projects.eip.description": "Application web dotée de toutes les fonctionnalités classiques d'un DAW (Digital Audio Workstation):",
@@ -13,4 +13,20 @@ export default {
     "projects.eip.tech5": "Tests automatisés via GitLab CI/CD",
     "projects.eip.tech6": "Conteneurisation avec Docker",
     "projects.eip.tech7": "Serveur HTTP NginX",
+    "projects.audiorooms": "AudioRooms",
+    "projects.audiorooms.period": "Septembre 2023",
+    "projects.audiorooms.location": "Projet personnel",
+    "projects.audiorooms.description": "Application web expérimentant avec les fonctionnalités de spatialisation de l'API WebAudio permettant de:",
+    "projects.audiorooms.feature1": "Créer ou rejoindre des \"rooms\"",
+    "projects.audiorooms.feature2": "Se déplacer sur la carte avec les flèches du clavier",
+    "projects.audiorooms.feature3": "Ajouter, retirer ou déplacer des sources sonores sur la carte",
+    "projects.audiorooms.feature4": "Entendre les sons émis par les sources audio ou les autres membres de la \"room\" avec une prise en compte de la distance et de la direction dans laquelle on regarde",
+    "projects.audiorooms.stack": "Ce projet a été développé à l'aide des technologies suivantes:",
+    "projects.audiorooms.tech1": "React et CSS l'interface",
+    "projects.audiorooms.tech2": "WebAudio (API navigateur) pour la spacialisation audio",
+    "projects.audiorooms.tech3": "Expressjs pour servir l'application et traiter les requêtes de fichiers audio",
+    "projects.audiorooms.tech4": "Socket.io pour la communication bi-directionnelle entre client et serveur",
+    "projects.audiorooms.tech5": "WebRTC pour l'envoi et la réception de flux audio en peer-to-peer avec les autres membres de la \"room\"",
 }
+
+export default projects

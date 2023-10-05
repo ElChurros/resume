@@ -1,4 +1,4 @@
-export default {
+const skills = {
     "skills.proglang": "Langages de programmation",
     "skills.webframeworks": "Frameworks web",
     "skills.mobframeworks": "Frameworks mobile",
@@ -12,3 +12,5 @@ export default {
     "skills.lang.german": "Allemand",
     "skills.lang.german.description": "niveau B1",
 }
+
+export default skills

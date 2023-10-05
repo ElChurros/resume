@@ -6,7 +6,7 @@ import skills from './skills';
 import training from './training';
 
 
-export default {
+const en = {
     ...experience,
     ...header,
     ...profile,
@@ -14,3 +14,5 @@ export default {
     ...skills,
     ...training,
 }
+
+export default en

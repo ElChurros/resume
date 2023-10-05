@@ -5,8 +5,7 @@ import projects from './projects';
 import skills from './skills';
 import training from './training';
 
-
-export default {
+const fr = {
     ...experience,
     ...header,
     ...profile,
@@ -14,3 +13,5 @@ export default {
     ...skills,
     ...training,
 }
+
+export default fr

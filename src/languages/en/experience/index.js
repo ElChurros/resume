@@ -1,4 +1,4 @@
-export default {
+const experience = {
     "experience.audiowizard": "Audiowizard",
     "experience.audiowizard.jobtitle": "Web developer",
     "experience.audiowizard.period": "September 2020 - February 2021",
@@ -30,3 +30,5 @@ export default {
     "experience.supbiotech.location": "Lyon, FR",
     "experience.supbiotech.description": "Taught computer science courses to 1st year students. Animated and corrected tutorials and lab works covering office automation, the basics of HTML and CSS languages ​​as well as algorithms applied to genetic biology in Python (parsing, analysis and transformation of genetic data).",
 }
+
+export default experience

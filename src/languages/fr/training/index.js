@@ -1,4 +1,4 @@
-export default {
+const training = {
     "training.epitech" : "Epitech",
     "training.epitech.period" : "2016 - 2021",
     "training.epitech.location" : "Lyon, FR",
@@ -30,3 +30,5 @@ export default {
     "training.highschool.location" : "Ferney-Voltaire, FR",
     "training.highschool.description" : "Bac scientifique avec option mathématiques (18,71/20)",
 }
+
+export default training
