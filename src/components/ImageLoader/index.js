@@ -3,6 +3,8 @@ import skills from '../../assets/skills.png'
 import training from '../../assets/training.png'
 import experience from '../../assets/experience.png'
 import projects from '../../assets/projects.png'
+import audiorooms from '../../assets/audiorooms.png'
+import studio from '../../assets/studio.png'
 import html from '../../assets/logos/html-logo.png'
 import css from '../../assets/logos/css-logo.png'
 import javascript from '../../assets/logos/javascript-logo.png'
@@ -37,6 +39,8 @@ const ImageLoader = () => {
     new Image().src = training
     new Image().src = experience
     new Image().src = projects
+    new Image().src = audiorooms
+    new Image().src = studio
     new Image().src = html
     new Image().src = css
     new Image().src = javascript
