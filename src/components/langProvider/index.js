@@ -1,19 +1,16 @@
-import { useContext } from 'react';
-import { IntlProvider } from 'react-intl';
-import { observer } from 'mobx-react';
-
-import Context from '../../context/languageContext';
+import { useContext } from 'react'
+import { IntlProvider } from 'react-intl'
+import { observer } from 'mobx-react'
+import Context from '../../context/languageContext'
 
 const langProvider = (Component) => {
-    return observer(props => {
-        const context = useContext(Context);
+  return observer(props => {
+    const context = useContext(Context)
 
-        return (
-            <IntlProvider locale={context.locale} messages={context.localeData[context._locale]}>
-                <Component {...props} />
-            </IntlProvider>
-        )
-    })
+    return <IntlProvider locale={context.locale} messages={context.localeData[context._locale]}>
+      <Component {...props} />
+    </IntlProvider>
+  })
 }
 
-export default langProvider;
+export default langProvider

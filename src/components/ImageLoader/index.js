@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect } from 'react'
 import skills from '../../assets/skills.png'
 import training from '../../assets/training.png'
 import experience from '../../assets/experience.png'
@@ -30,7 +30,7 @@ import nginx from '../../assets/logos/nginx-logo.png'
 import apache from '../../assets/logos/apache-logo.png'
 import circleci from '../../assets/logos/circleci-logo.png'
 
-const ImageLoader = () => {  
+const ImageLoader = () => {
   useEffect(() => {
     new Image().src = skills
     new Image().src = training
@@ -67,4 +67,4 @@ const ImageLoader = () => {
   return null
 }
 
-export default ImageLoader;
+export default ImageLoader

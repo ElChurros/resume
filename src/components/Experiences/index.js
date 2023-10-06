@@ -1,29 +1,14 @@
-import SectionContext from '../../context/sectionContext';
-import Section from '../Section';
+import Section from '../Section'
 
 const Experiences = () => {
-  return (
-    <>
-      <SectionContext.Provider value='experience.epitech'>
-        <Section location period description companyLink="https://www.epitech.eu/"/>
-      </SectionContext.Provider>
-      <SectionContext.Provider value='experience.supbiotech'>
-        <Section location period description companyLink="https://www.supbiotech.fr/"/>
-      </SectionContext.Provider>
-      <SectionContext.Provider value='experience.audiowizard'>
-        <Section location period description companyLink='https://www.audiowizard.fr'/>
-      </SectionContext.Provider>
-      <SectionContext.Provider value='experience.apm'>
-        <Section location period description companyLink="https://www.apmtechnologies.com"/>
-      </SectionContext.Provider>
-      <SectionContext.Provider value='experience.codeac'>
-        <Section location period description companyLink="https://www.coding-academy.fr"/>
-      </SectionContext.Provider>
-      <SectionContext.Provider value='experience.sifoee'>
-        <Section location period description companyLink="https://www.sifoee.com"/>
-      </SectionContext.Provider>
-    </>
-  );
+  return <>
+    <Section prefix='experience.epitech' location period description companyLink="https://www.epitech.eu/" />
+    <Section prefix='experience.supbiotech' location period description companyLink="https://www.supbiotech.fr/" />
+    <Section prefix='experience.audiowizard' location period description companyLink='https://www.audiowizard.fr' />
+    <Section prefix='experience.apm' location period description companyLink="https://www.apmtechnologies.com" />
+    <Section prefix='experience.codeac' location period description companyLink="https://www.coding-academy.fr" />
+    <Section prefix='experience.sifoee' location period description companyLink="https://www.sifoee.com" />
+  </>
 }
-  
-export default Experiences;
+
+export default Experiences

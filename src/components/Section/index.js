@@ -1,8 +1,9 @@
-import FormattedMessage from '../FormattedMessage';
-import styles from './Section.module.css';
+import FormattedMessage from '../FormattedMessage'
+import SectionContext from '../../context/sectionContext'
+import styles from './Section.module.css'
 
-const Section = ({ companyLink, titleLink, location, period, description, children, ...props }) => {
-  return (
+const Section = ({ prefix, companyLink, titleLink, location, period, description, children, ...props }) => {
+  return <SectionContext.Provider value={prefix}>
     <div className={styles.container} {...props}>
       <h1 className={styles.title}>
         {titleLink ? <a href={titleLink} target='_blank' rel='noopener noreferrer'><FormattedMessage id={companyLink ? 'jobtitle' : ''} /></a>
@@ -18,7 +19,7 @@ const Section = ({ companyLink, titleLink, location, period, description, childr
         {children}
       </div>
     </div>
-  );
+  </SectionContext.Provider>
 }
 
-export default Section;
+export default Section

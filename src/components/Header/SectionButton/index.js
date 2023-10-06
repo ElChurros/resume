@@ -1,22 +1,20 @@
 import { useNavigate } from 'react-router-dom'
-import FormattedMessage from '../../FormattedMessage';
+import FormattedMessage from '../../FormattedMessage'
 import SectionContext from '../../../context/sectionContext'
-import styles from './SectionButton.module.css';
+import styles from './SectionButton.module.css'
 
 const LinkButton = ({ to, onClick, children, ...props }) => {
   const navigate = useNavigate()
 
-  return (
-    <button
-      {...props} // `children` is just another prop!
-      onClick={(event) => {
-        onClick && onClick(event)
-        navigate(to)
-      }}>
-      {children}
-    </button>
-  )
-};
+  return <button
+    {...props}
+    onClick={(event) => {
+      onClick && onClick(event)
+      navigate(to)
+    }}>
+    {children}
+  </button>
+}
 
 const SectionButton = ({ tab, held, className, ...props }) => {
   className = held ? `${className} ${styles.held}` : className;
@@ -27,4 +25,4 @@ const SectionButton = ({ tab, held, className, ...props }) => {
   </SectionContext.Provider>
 }
 
-export default SectionButton;
+export default SectionButton

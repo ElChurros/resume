@@ -1,8 +1,8 @@
-import { useContext, useState, useEffect, useRef } from 'react';
-import Context from '../../../context/languageContext';
+import { useContext, useState, useEffect, useRef } from 'react'
+import Context from '../../../context/languageContext'
 import frenchFlag from '../../../assets/french-flag.png'
 import ukFlag from '../../../assets/uk-flag.png'
-import styles from './LanguageSelector.module.css';
+import styles from './LanguageSelector.module.css'
 
 const LanguageSelector = () => {
   const context = useContext(Context)
@@ -11,11 +11,11 @@ const LanguageSelector = () => {
 
   useEffect(() => {
     if (open)
-      endRef.current.scrollIntoView({behavior: 'smooth'})
+      endRef.current.scrollIntoView({ behavior: 'smooth' })
   }, [open])
 
   return <div className={styles.container}>
-    {open && <button onClick={() => {context.locale = context.locale === 'en' ? 'fr' : 'en'; setOpen(prev => !prev)}}>
+    {open && <button onClick={() => { context.locale = context.locale === 'en' ? 'fr' : 'en'; setOpen(prev => !prev) }}>
       <img
         alt={context.locale === 'en' ? 'French flag' : 'UK flag'}
         width={'25px'}
@@ -23,14 +23,14 @@ const LanguageSelector = () => {
       />
     </button>}
     <button onClick={() => setOpen(prev => !prev)}>
-    <img
+      <img
         alt={context.locale === 'fr' ? 'French flag' : 'UK flag'}
         width={'25px'}
         src={context.locale === 'fr' ? frenchFlag : ukFlag}
       />
     </button>
-    <div ref={endRef}/>
+    <div ref={endRef} />
   </div>
 }
 
-export default LanguageSelector;
+export default LanguageSelector

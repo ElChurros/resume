@@ -12,6 +12,8 @@ const skills = {
     "skills.lang.english.description": "Excellent niveau (105 au TOEFL avant une année d'études aux Etats-Unis)",
     "skills.lang.german": "Allemand",
     "skills.lang.german.description": "niveau B1",
+    "skills.test": "test title",
+    "skills.test.text": "test text",
 }
 
 export default skills
