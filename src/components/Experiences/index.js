@@ -1,14 +1,27 @@
+import SectionContext from '../../context/sectionContext';
 import Section from '../Section';
 
 const Experiences = () => {
   return (
     <>
-      <Section id='experience.epitech' location period description companyLink="https://www.epitech.eu/"/>
-      <Section id='experience.supbiotech' location period description companyLink="https://www.supbiotech.fr/"/>
-      <Section id='experience.audiowizard' location period description companyLink='https://www.audiowizard.fr'/>
-      <Section id='experience.apm' location period description companyLink="https://www.apmtechnologies.com"/>
-      <Section id='experience.codeac' location period description companyLink="https://www.coding-academy.fr"/>
-      <Section id='experience.sifoee' location period description companyLink="https://www.sifoee.com"/>
+      <SectionContext.Provider value='experience.epitech'>
+        <Section location period description companyLink="https://www.epitech.eu/"/>
+      </SectionContext.Provider>
+      <SectionContext.Provider value='experience.supbiotech'>
+        <Section location period description companyLink="https://www.supbiotech.fr/"/>
+      </SectionContext.Provider>
+      <SectionContext.Provider value='experience.audiowizard'>
+        <Section location period description companyLink='https://www.audiowizard.fr'/>
+      </SectionContext.Provider>
+      <SectionContext.Provider value='experience.apm'>
+        <Section location period description companyLink="https://www.apmtechnologies.com"/>
+      </SectionContext.Provider>
+      <SectionContext.Provider value='experience.codeac'>
+        <Section location period description companyLink="https://www.coding-academy.fr"/>
+      </SectionContext.Provider>
+      <SectionContext.Provider value='experience.sifoee'>
+        <Section location period description companyLink="https://www.sifoee.com"/>
+      </SectionContext.Provider>
     </>
   );
 }

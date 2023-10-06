@@ -2,7 +2,7 @@ import { useContext, Fragment } from 'react';
 import { useLocation } from 'react-router-dom';
 import SectionButton from './SectionButton';
 import LanguageSelector from './LanguageSelector';
-import Context from '../../context';
+import Context from '../../context/languageContext';
 import styles from './Header.module.css'
 
 const Header = ({hidden, ...props}) => {

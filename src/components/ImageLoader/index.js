@@ -15,6 +15,12 @@ import angular from '../../assets/logos/angular-logo.png'
 import nodejs from '../../assets/logos/nodejs-logo.png'
 import django from '../../assets/logos/django-logo.png'
 import symfony from '../../assets/logos/symfony-logo.png'
+import socketio from '../../assets/logos/socketio.png'
+import webrtc from '../../assets/logos/webrtc-logo.png'
+import webaudio from '../../assets/logos/webaudio-logo.png'
+import webassembly from '../../assets/logos/webassembly-logo.png'
+import tailwind from '../../assets/logos/tailwind-logo.png'
+import motion from '../../assets/logos/motion-logo.webp'
 import androidstudio from '../../assets/logos/androidstudio-logo.png'
 import mongodb from '../../assets/logos/mongodb-logo.png'
 import sql from '../../assets/logos/sql-logo.png'
@@ -50,6 +56,12 @@ const ImageLoader = () => {
     new Image().src = nginx
     new Image().src = apache
     new Image().src = circleci
+    new Image().src = socketio
+    new Image().src = webaudio
+    new Image().src = webassembly
+    new Image().src = webrtc
+    new Image().src = tailwind
+    new Image().src = motion
   }, [])
 
   return null

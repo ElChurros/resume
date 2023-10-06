@@ -1,17 +1,25 @@
-import { FormattedMessage } from 'react-intl';
+import FormattedMessage from '../FormattedMessage';
 import Section from '../Section';
+import SectionContext from '../../context/sectionContext';
 import html from '../../assets/logos/html-logo.png'
 import css from '../../assets/logos/css-logo.png'
 import javascript from '../../assets/logos/javascript-logo.png'
+import nodejs from '../../assets/logos/nodejs-logo.png'
 import cpp from '../../assets/logos/cpp-logo.png'
 import python from '../../assets/logos/python-logo.png'
 import php from '../../assets/logos/php-logo.png'
 import react from '../../assets/logos/react-logo.png'
 import vue from '../../assets/logos/vue-logo.png'
 import angular from '../../assets/logos/angular-logo.png'
-import nodejs from '../../assets/logos/nodejs-logo.png'
+import express from '../../assets/logos/express-logo.png'
 import django from '../../assets/logos/django-logo.png'
 import symfony from '../../assets/logos/symfony-logo.png'
+import socketio from '../../assets/logos/socketio.png'
+import webrtc from '../../assets/logos/webrtc-logo.png'
+import webaudio from '../../assets/logos/webaudio-logo.png'
+import webassembly from '../../assets/logos/webassembly-logo.png'
+import tailwind from '../../assets/logos/tailwind-logo.png'
+import motion from '../../assets/logos/motion-logo.webp'
 import androidstudio from '../../assets/logos/androidstudio-logo.png'
 import mongodb from '../../assets/logos/mongodb-logo.png'
 import sql from '../../assets/logos/sql-logo.png'
@@ -24,11 +32,10 @@ import apache from '../../assets/logos/apache-logo.png'
 import circleci from '../../assets/logos/circleci-logo.png'
 import styles from './Skills.module.css';
 
-
 const Skills = () => {
-  return (
-    <>
-      <Section id={'skills.proglang'}>
+  return <>
+    <SectionContext.Provider value='skills.proglang'>
+      <Section>
         <div className={styles.horizList}>
           <div className={styles.logoElem}>
             <img alt="HTML logo" width={'100px'} src={html}/>
@@ -39,6 +46,9 @@ const Skills = () => {
           <div className={styles.logoElem}>
             <img style={{marginRight: '1rem'}} alt="Javascript logo" width={'80px'} src={javascript}/>
             <span>Javascript</span>
+          </div>
+          <div className={styles.logoElem}>
+            <img  style={{paddingTop: '1rem'}} alt="NodeJs logo" width={'150px'} src={nodejs}/>
           </div>
           <div className={styles.logoElem}>
             <img style={{marginRight: '1rem'}} alt="C++ logo" width={'85px'} src={cpp}/>
@@ -52,7 +62,9 @@ const Skills = () => {
           </div>
         </div>
       </Section>
-      <Section id={'skills.webframeworks'}>
+    </SectionContext.Provider>
+    <SectionContext.Provider value='skills.webframeworks'>
+      <Section>
         <div className={styles.horizList}>
           <div className={styles.logoElem}>
             <img alt="React logo" width={'100px'} src={react}/>
@@ -67,7 +79,7 @@ const Skills = () => {
             <span>Angular</span>
           </div>
           <div className={styles.logoElem}>
-            <img  style={{paddingTop: '1rem'}} alt="NodeJs logo" width={'150px'} src={nodejs}/>
+            <img  className={styles.inverted} alt="Express logo" width={'150px'} src={express}/>
           </div>
           <div className={styles.logoElem}>
             <img alt="Django logo" width={'150px'} src={django}/>
@@ -77,7 +89,39 @@ const Skills = () => {
           </div>
         </div>
       </Section>
-      <Section id={"skills.mobframeworks"}>
+    </SectionContext.Provider>
+    <SectionContext.Provider value='skills.weblibs'>
+      <Section>
+        <div className={styles.horizList}>
+          <div className={styles.logoElem}>
+            <img alt='Socket.io logo' width={'80px'} style={{marginRight: '1rem'}} src={socketio}/>
+            <span>Socket.io</span>
+          </div>
+          <div className={styles.logoElem}>
+            <img alt='WebRTC logo' width={'80px'} style={{marginRight: '1rem'}} src={webrtc}/>
+            <span>WebRTC</span>
+          </div>
+          <div className={styles.logoElem}>
+            <img alt='WebAudio logo' width='80px' style={{marginRight: '1rem'}} src={webaudio}/>
+            <span>WebAudio</span>
+          </div>
+          <div className={styles.logoElem}>
+            <img alt='WebAssembly logo' width='80px' style={{marginRight: '1rem'}} src={webassembly}/>
+            <span>WebAssembly</span>
+          </div>
+          <div className={styles.logoElem}>
+            <img alt='TailwindCSS logo' width='80px' style={{marginRight: '1rem'}} src={tailwind}/>
+            <span>Tailwind CSS</span>
+          </div>
+          <div className={styles.logoElem}>
+            <img alt='Motion logo' width='80px' style={{marginRight: '1rem'}} src={motion}/>
+            <span>Motion</span>
+          </div>
+        </div>
+      </Section>
+    </SectionContext.Provider>
+    <SectionContext.Provider value='skills.mobframeworks'>
+      <Section>
         <div className={styles.horizList}>
           <div className={styles.logoElem}>
             <img alt="React logo" width={'100px'} src={react}/>
@@ -89,7 +133,9 @@ const Skills = () => {
           </div>
         </div>
       </Section>
-      <Section id={"skills.dbs"}>
+    </SectionContext.Provider>
+    <SectionContext.Provider value='skills.dbs'>
+      <Section>
         <div className={styles.horizList}>
           <div className={styles.logoElem}>
             <img alt="MongoDB logo" width={'150px'} src={mongodb}/>
@@ -99,7 +145,9 @@ const Skills = () => {
           </div>
         </div>
       </Section>
-      <Section id="skills.tools">
+    </SectionContext.Provider>
+    <SectionContext.Provider value='skills.tools'>
+      <Section>
         <div className={styles.horizList}>
           <div className={styles.logoElem}>
             <img style={{marginRight: '1rem'}} alt="Git logo" width={'80px'} src={git}/>
@@ -110,7 +158,7 @@ const Skills = () => {
             <span>Docker</span>
           </div>
           <div className={styles.logoElem}>
-            <img style={{marginRight: '1rem', filter: 'invert(1)'}} alt="Ansible logo" width={'80px'} src={ansible}/>
+            <img className={styles.inverted} style={{marginRight: '1rem'}} alt="Ansible logo" width={'80px'} src={ansible}/>
             <span>Ansible</span>
           </div>
           <div className={styles.logoElem}>
@@ -129,24 +177,26 @@ const Skills = () => {
           </div>
         </div>
       </Section>
-      <Section id="skills.lang">
+    </SectionContext.Provider>
+    <SectionContext.Provider value='skills.lang'>
+      <Section>
         <div className={styles.horizList}>
           <div className={styles.verticalList}>
-            <h2><FormattedMessage id={'skills.lang.french'}/></h2>
-            <span><FormattedMessage id={'skills.lang.french.description'}/></span>
+            <h2><FormattedMessage id={'french'}/></h2>
+            <span><FormattedMessage id={'french.description'}/></span>
           </div>
           <div className={styles.verticalList}>
-            <h2><FormattedMessage id={'skills.lang.english'}/></h2>
-            <span><FormattedMessage id={'skills.lang.english.description'}/></span>
+            <h2><FormattedMessage id={'english'}/></h2>
+            <span><FormattedMessage id={'english.description'}/></span>
           </div>
           <div className={styles.verticalList}>
-            <h2><FormattedMessage id={'skills.lang.german'}/></h2>
-            <span><FormattedMessage id={'skills.lang.german.description'}/></span>
+            <h2><FormattedMessage id={'german'}/></h2>
+            <span><FormattedMessage id={'german.description'}/></span>
           </div>
         </div>
       </Section>
-    </>
-  );
+    </SectionContext.Provider>
+  </>
 }
 
 export default Skills;

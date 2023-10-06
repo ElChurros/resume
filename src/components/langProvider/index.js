@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import { IntlProvider } from 'react-intl';
 import { observer } from 'mobx-react';
 
-import Context from '../../context';
+import Context from '../../context/languageContext';
 
 const langProvider = (Component) => {
     return observer(props => {

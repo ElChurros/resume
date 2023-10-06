@@ -1,6 +1,7 @@
 const skills = {
     "skills.proglang": "Programming languages",
     "skills.webframeworks": "Web frameworks",
+    "skills.weblibs": "Web libraries and APIs",
     "skills.mobframeworks": "Mobile frameworks",
     "skills.dbs": "Databases",
     "skills.tools": "Development, integration and deployment tools",

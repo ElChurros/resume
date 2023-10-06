@@ -1,5 +1,5 @@
 import { useContext, useState, useEffect, useRef } from 'react';
-import Context from '../../../context';
+import Context from '../../../context/languageContext';
 import frenchFlag from '../../../assets/french-flag.png'
 import ukFlag from '../../../assets/uk-flag.png'
 import styles from './LanguageSelector.module.css';

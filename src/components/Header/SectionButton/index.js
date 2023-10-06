@@ -1,5 +1,6 @@
-import { FormattedMessage } from 'react-intl';
 import { useNavigate } from 'react-router-dom'
+import FormattedMessage from '../../FormattedMessage';
+import SectionContext from '../../../context/sectionContext'
 import styles from './SectionButton.module.css';
 
 const LinkButton = ({ to, onClick, children, ...props }) => {
@@ -17,13 +18,13 @@ const LinkButton = ({ to, onClick, children, ...props }) => {
   )
 };
 
-const SectionButton = ({tab, held, className, ...props}) => {
+const SectionButton = ({ tab, held, className, ...props }) => {
   className = held ? `${className} ${styles.held}` : className;
-  return (
+  return <SectionContext.Provider value='header'>
     <LinkButton className={className} to={`/${tab}`} {...props}>
-      <FormattedMessage id={`header.${tab}`} />
+      <FormattedMessage id={`${tab}`} />
     </LinkButton>
-  )
+  </SectionContext.Provider>
 }
 
 export default SectionButton;
